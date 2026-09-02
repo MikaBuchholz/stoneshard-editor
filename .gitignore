@@ -1,0 +1,14 @@
+# Game files and personal saves never go in the repo
+*.rar
+*.win
+test/
+win/
+
+# Tooling
+node_modules/
+dist/
+__pycache__/
+.DS_Store
+
+# Extracted personal character folders
+character_*/

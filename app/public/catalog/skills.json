@@ -1,0 +1,4425 @@
+{
+"skills": [
+{
+"id": "o_skill_throw_acid_bomb_ico",
+"key": "throw_acid_bomb",
+"kind": "active",
+"name": "Acid Flask Throw",
+"icon": "throw_acid_bomb.png"
+},
+{
+"id": "o_pass_skill_adaptability",
+"key": "adaptability",
+"kind": "passive",
+"name": "Adaptability",
+"icon": "adaptability.png"
+},
+{
+"id": "o_skill_adrenaline_rush_ico",
+"key": "adrenaline_rush",
+"kind": "active",
+"name": "Adrenaline Rush",
+"icon": "adrenaline_rush.png"
+},
+{
+"id": "o_skill_mana_crystal_bolt_ico",
+"key": "mana_crystal_bolt",
+"kind": "active",
+"name": "Aether Bolt",
+"icon": "mana_crystal_bolt.png"
+},
+{
+"id": "o_pass_skill_aethereal_harmony",
+"key": "aethereal_harmony",
+"kind": "passive",
+"name": "Aether Harmony",
+"icon": "aethereal_harmony.png"
+},
+{
+"id": "o_skill_aether_shield_ico",
+"key": "aether_shield",
+"kind": "active",
+"name": "Aether Shield",
+"icon": "aether_shield.png"
+},
+{
+"id": "o_skill_against_the_odds_ico",
+"key": "against_the_odds",
+"kind": "active",
+"name": "Against the Odds",
+"icon": "against_the_odds.png"
+},
+{
+"id": "o_skill_animated_servant_ico",
+"key": "animated_servant",
+"kind": "active",
+"name": "Animated Servant",
+"icon": "animated_servant.png"
+},
+{
+"id": "o_pass_skill_anticipation",
+"key": "anticipation",
+"kind": "passive",
+"name": "Anticipation",
+"icon": "anticipation.png"
+},
+{
+"id": "o_skill_apocalyptic_sermon_ico",
+"key": "apocalyptic_sermon",
+"kind": "active",
+"name": "Apocalyptic Sermon",
+"icon": "apocalyptic_sermon.png"
+},
+{
+"id": "o_skill_arc_cleave_ico",
+"key": "arc_cleave",
+"kind": "active",
+"name": "Arc Cleave",
+"icon": "arc_cleave.png"
+},
+{
+"id": "o_pass_skill_arcane_might",
+"key": "arcane_might",
+"kind": "passive",
+"name": "Arcane Might",
+"icon": "arcane_might.png"
+},
+{
+"id": "o_skill_arcane_tether_ico",
+"key": "arcane_tether",
+"kind": "active",
+"name": "Arcane Tether",
+"icon": "arcane_tether.png"
+},
+{
+"id": "o_skill_armor_break_ico",
+"key": "armor_break",
+"kind": "active",
+"name": "Armor Break",
+"icon": "armor_break.png"
+},
+{
+"id": "o_pass_skill_armor_breaker",
+"key": "armor_breaker",
+"kind": "passive",
+"name": "Armor Crusher",
+"icon": "armor_breaker.png"
+},
+{
+"id": "o_pass_skill_astral_tides",
+"key": "astral_tides",
+"kind": "passive",
+"name": "Astral Tides",
+"icon": "astral_tides.png"
+},
+{
+"id": "o_pass_skill_asceticism",
+"key": "asceticism",
+"kind": "passive",
+"name": "Austerity",
+"icon": "asceticism.png"
+},
+{
+"id": "o_skill_baleful_glow_ico",
+"key": "baleful_glow",
+"kind": "active",
+"name": "Baleful Glow"
+},
+{
+"id": "o_skill_scream_of_doom_ico",
+"key": "scream_of_doom",
+"kind": "active",
+"name": "Baleful Scream",
+"icon": "scream_of_doom.png"
+},
+{
+"id": "o_skill_ball_lightning_ico",
+"key": "ball_lightning",
+"kind": "active",
+"name": "Ball Lightning"
+},
+{
+"id": "o_skill_raise_the_banner_ico",
+"key": "raise_the_banner",
+"kind": "active",
+"name": "Banners High!",
+"icon": "raise_the_banner.png"
+},
+{
+"id": "o_pass_skill_baptism_of_fire",
+"key": "baptism_of_fire",
+"kind": "passive",
+"name": "Baptism by Fire",
+"icon": "baptism_of_fire.png"
+},
+{
+"id": "o_pass_skill_batlle_rage",
+"key": "batlle_rage",
+"kind": "passive",
+"name": "Batlle Rage"
+},
+{
+"id": "o_skill_battering_ram_ico",
+"key": "battering_ram",
+"kind": "active",
+"name": "Battering Ram"
+},
+{
+"id": "o_pass_skill_battle_trance",
+"key": "battle_trance",
+"kind": "passive",
+"name": "Battle Trance"
+},
+{
+"id": "o_pass_skill_battle_hardiness",
+"key": "battle_hardiness",
+"kind": "passive",
+"name": "Battle-Forged"
+},
+{
+"id": "o_pass_skill_berserk_traditions",
+"key": "berserk_traditions",
+"kind": "passive",
+"name": "Berserk Tradition"
+},
+{
+"id": "o_skill_bestial_charge_ico",
+"key": "bestial_charge",
+"kind": "active",
+"name": "Bestial Charge",
+"icon": "bestial_charge.png"
+},
+{
+"id": "o_pass_skill_beyond_the_veil",
+"key": "beyond_the_veil",
+"kind": "passive",
+"name": "Beyond the Veil",
+"icon": "beyond_the_veil.png"
+},
+{
+"id": "o_skill_sigil_of_binding_ico",
+"key": "sigil_of_binding",
+"kind": "active",
+"name": "Binding Sigil",
+"icon": "sigil_of_binding.png"
+},
+{
+"id": "o_pass_skill_care_blade",
+"key": "care_blade",
+"kind": "passive",
+"name": "Blade Maintenance"
+},
+{
+"id": "o_skill_blasphemous_mass_ico",
+"key": "blasphemous_mass",
+"kind": "active",
+"name": "Blasphemous Mass",
+"icon": "blasphemous_mass.png"
+},
+{
+"id": "o_skill_sign_of_darkness_ico",
+"key": "sign_of_darkness",
+"kind": "active",
+"name": "Blasphemous Sigil"
+},
+{
+"id": "o_skill_blister_burst_ico",
+"key": "blister_burst",
+"kind": "active",
+"name": "Blister Burst"
+},
+{
+"id": "o_skill_blood_clot_ico",
+"key": "blood_clot",
+"kind": "active",
+"name": "Blood Clot",
+"icon": "blood_clot.png"
+},
+{
+"id": "o_skill_blood_craze_ico",
+"key": "blood_craze",
+"kind": "active",
+"name": "Blood Craze",
+"icon": "blood_craze.png"
+},
+{
+"id": "o_skill_blood_puddle_ico",
+"key": "blood_puddle",
+"kind": "active",
+"name": "Blood Puddle",
+"icon": "blood_puddle.png"
+},
+{
+"id": "o_skill_blood_spit_ico",
+"key": "blood_spit",
+"kind": "active",
+"name": "Blood Spit"
+},
+{
+"id": "o_skill_vampiric_blood_ico",
+"key": "vampiric_blood",
+"kind": "active",
+"name": "Bloodthirst",
+"icon": "vampiric_blood.png"
+},
+{
+"id": "o_pass_skill_spirit_and_body",
+"key": "spirit_and_body",
+"kind": "passive",
+"name": "Body and Spirit",
+"icon": "spirit_and_body.png"
+},
+{
+"id": "o_skill_boiling_blood_ico",
+"key": "boiling_blood",
+"kind": "active",
+"name": "Boiling Blood",
+"icon": "boiling_blood.png"
+},
+{
+"id": "o_skill_bone_fires_ico",
+"key": "bone_fires",
+"kind": "active",
+"name": "Bone Pyres",
+"icon": "bone_fires.png"
+},
+{
+"id": "o_skill_bone_throw_ico",
+"key": "bone_throw",
+"kind": "active",
+"name": "Bone Throw",
+"icon": "bone_throw.png"
+},
+{
+"id": "o_pass_skill_bonebreaker",
+"key": "bonebreaker",
+"kind": "passive",
+"name": "Bonebreaker",
+"icon": "bonebreaker.png"
+},
+{
+"id": "o_skill_boulder_toss_ico",
+"key": "boulder_toss",
+"kind": "active",
+"name": "Boulder Toss",
+"icon": "boulder_toss.png"
+},
+{
+"id": "o_skill_bound_by_blood_ico",
+"key": "bound_by_blood",
+"kind": "active",
+"name": "Bound by Blood",
+"icon": "bound_by_blood.png"
+},
+{
+"id": "o_skill_brace_for_impact_ico",
+"key": "brace_for_impact",
+"kind": "active",
+"name": "Brace for Impact!"
+},
+{
+"id": "o_skill_brand_of_anguish_ico",
+"key": "brand_of_anguish",
+"kind": "active",
+"name": "Brand of Anguish",
+"icon": "brand_of_anguish.png"
+},
+{
+"id": "o_skill_breakthrough_ico",
+"key": "breakthrough",
+"kind": "active",
+"name": "Breakthrough",
+"icon": "breakthrough.png"
+},
+{
+"id": "o_skill_burdened_by_sin_ico",
+"key": "burdened_by_sin",
+"kind": "active",
+"name": "Burden of Sin",
+"icon": "burdened_by_sin.png"
+},
+{
+"id": "o_skill_burning_offering_ico",
+"key": "burning_offering",
+"kind": "active",
+"name": "Burnt Offering",
+"icon": "burning_offering.png"
+},
+{
+"id": "o_skill_butchering_ico",
+"key": "butchering",
+"kind": "active",
+"name": "Butchering"
+},
+{
+"id": "o_skill_throw_caltrop_ico",
+"key": "throw_caltrop",
+"kind": "active",
+"name": "Caltrops Throw",
+"icon": "throw_caltrop.png"
+},
+{
+"id": "o_skill_cannibalistic_craze_ico",
+"key": "cannibalistic_craze",
+"kind": "active",
+"name": "Cannibalistic Craze"
+},
+{
+"id": "o_pass_skill_care_of_equipment",
+"key": "care_of_equipment",
+"kind": "passive",
+"name": "Care Of Equipment"
+},
+{
+"id": "o_skill_cauterize_wounds_ico",
+"key": "cauterize_wounds",
+"kind": "active",
+"name": "Cauterize Wounds"
+},
+{
+"id": "o_skill_chain_lightning_ico",
+"key": "chain_lightning",
+"kind": "active",
+"name": "Chain Lightning"
+},
+{
+"id": "o_pass_skill_chain_reaction",
+"key": "chain_reaction",
+"kind": "passive",
+"name": "Chain Reaction",
+"icon": "chain_reaction.png"
+},
+{
+"id": "o_skill_chain_strike_ico",
+"key": "chain_strike",
+"kind": "active",
+"name": "Chain Strike",
+"icon": "chain_strike.png"
+},
+{
+"id": "o_skill_troll_clout_ico",
+"key": "troll_clout",
+"kind": "active",
+"name": "Claw Swipe"
+},
+{
+"id": "o_skill_cleave_ico",
+"key": "cleave",
+"kind": "active",
+"name": "Cleaving Strike",
+"icon": "cleave.png"
+},
+{
+"id": "o_skill_come_my_fanatics_ico",
+"key": "come_my_fanatics",
+"kind": "active",
+"name": "Come, My Fanatics!",
+"icon": "come_my_fanatics.png"
+},
+{
+"id": "o_skill_honed_moves_ico",
+"key": "honed_moves",
+"kind": "active",
+"name": "Concentration",
+"icon": "honed_moves.png"
+},
+{
+"id": "o_pass_skill_concussion",
+"key": "concussion",
+"kind": "passive",
+"name": "Concussion",
+"icon": "concussion.png"
+},
+{
+"id": "o_pass_skill_conduit",
+"key": "conduit",
+"kind": "passive",
+"name": "Conductivity"
+},
+{
+"id": "o_skill_confess_ico",
+"key": "confess",
+"kind": "active",
+"name": "Confess!",
+"icon": "confess.png"
+},
+{
+"id": "o_pass_skill_consonance",
+"key": "consonance",
+"kind": "passive",
+"name": "Consonance",
+"icon": "consonance.png"
+},
+{
+"id": "o_pass_skill_constant_training",
+"key": "constant_training",
+"kind": "passive",
+"name": "Constant Practice",
+"icon": "constant_training.png"
+},
+{
+"id": "o_skill_constrict_ico",
+"key": "constrict",
+"kind": "active",
+"name": "Constricting Tentacle",
+"icon": "constrict.png"
+},
+{
+"id": "o_skill_corpse_devourment_ico",
+"key": "corpse_devourment",
+"kind": "active",
+"name": "Corpse Devourment",
+"icon": "corpse_devourment.png"
+},
+{
+"id": "o_pass_skill_counterattack_mastery",
+"key": "counterattack_mastery",
+"kind": "passive",
+"name": "Counterattack Mastery",
+"icon": "counterattack_mastery.png"
+},
+{
+"id": "o_skill_coup_de_grace_ico",
+"key": "coup_de_grace",
+"kind": "active",
+"name": "Coup de Grace",
+"icon": "coup_de_grace.png"
+},
+{
+"id": "o_pass_skill_courage",
+"key": "courage",
+"kind": "passive",
+"name": "Courage",
+"icon": "courage.png"
+},
+{
+"id": "o_skill_craft_ico",
+"key": "craft",
+"kind": "active",
+"name": "Craft"
+},
+{
+"id": "o_skill_crimson_banner_ico",
+"key": "crimson_banner",
+"kind": "active",
+"name": "Crimson Banner",
+"icon": "crimson_banner.png"
+},
+{
+"id": "o_skill_cull_the_weak_ico",
+"key": "cull_the_weak",
+"kind": "active",
+"name": "Cull the Weak",
+"icon": "cull_the_weak.png"
+},
+{
+"id": "o_skill_curse_of_weakness_ico",
+"key": "curse_of_weakness",
+"kind": "active",
+"name": "Curse of Agony",
+"icon": "curse_of_weakness.png"
+},
+{
+"id": "o_skill_curse_ico",
+"key": "curse",
+"kind": "active",
+"name": "Curse of Decay"
+},
+{
+"id": "o_pass_skill_armor_adjustment",
+"key": "armor_adjustment",
+"kind": "passive",
+"name": "Custom Adjustments",
+"icon": "armor_adjustment.png"
+},
+{
+"id": "o_skill_cut_through_ico",
+"key": "cut_through",
+"kind": "active",
+"name": "Cut Through"
+},
+{
+"id": "o_skill_throw_dagger_ico",
+"key": "throw_dagger",
+"kind": "active",
+"name": "Dagger Throw",
+"icon": "throw_dagger.png"
+},
+{
+"id": "o_pass_skill_dance_of_death",
+"key": "dance_of_death",
+"kind": "passive",
+"name": "Danse Macabre",
+"icon": "dance_of_death.png"
+},
+{
+"id": "o_skill_dash_ico",
+"key": "dash",
+"kind": "active",
+"name": "Dash",
+"icon": "dash.png"
+},
+{
+"id": "o_pass_skill_dazing_strikes",
+"key": "dazing_strikes",
+"kind": "passive",
+"name": "Dazing Strikes",
+"icon": "dazing_strikes.png"
+},
+{
+"id": "o_skill_dead_or_alive_ico",
+"key": "dead_or_alive",
+"kind": "active",
+"name": "Dead or Alive",
+"icon": "dead_or_alive.png"
+},
+{
+"id": "o_skill_deadly_premonition_ico",
+"key": "deadly_premonition",
+"kind": "active",
+"name": "Deadly Premonition",
+"icon": "deadly_premonition.png"
+},
+{
+"id": "o_skill_deadly_tail_ico",
+"key": "deadly_tail",
+"kind": "active",
+"name": "Deadly Tail"
+},
+{
+"id": "o_skill_deadly_trick_ico",
+"key": "deadly_trick",
+"kind": "active",
+"name": "Deadly Trick",
+"icon": "deadly_trick.png"
+},
+{
+"id": "o_skill_deafening_roar_ico",
+"key": "deafening_roar",
+"kind": "active",
+"name": "Deafening Roar"
+},
+{
+"id": "o_skill_death_touch_ico",
+"key": "death_touch",
+"kind": "active",
+"name": "Death Touch",
+"icon": "death_touch.png"
+},
+{
+"id": "o_skill_throw_bee_bomb_ico",
+"key": "throw_bee_bomb",
+"kind": "active",
+"name": "Deathstinger Jar Throw",
+"icon": "throw_bee_bomb.png"
+},
+{
+"id": "o_skill_defensive_tactics_ico",
+"key": "defensive_tactics",
+"kind": "active",
+"name": "Defensive Tactic",
+"icon": "defensive_tactics.png"
+},
+{
+"id": "o_skill_befoul_the_remains_ico",
+"key": "befoul_the_remains",
+"kind": "active",
+"name": "Defiled Remains"
+},
+{
+"id": "o_skill_deflect_ico",
+"key": "deflect",
+"kind": "active",
+"name": "Deflect",
+"icon": "deflect.png"
+},
+{
+"id": "o_skill_darkbolt_ico",
+"key": "darkbolt",
+"kind": "active",
+"name": "Desecration"
+},
+{
+"id": "o_pass_skill_destabilizing_hits",
+"key": "destabilizing_hits",
+"kind": "passive",
+"name": "Destabilizing Hits",
+"icon": "destabilizing_hits.png"
+},
+{
+"id": "o_skill_intransigence_ico",
+"key": "intransigence",
+"kind": "active",
+"name": "Determination",
+"icon": "intransigence.png"
+},
+{
+"id": "o_skill_destructive_force_ico",
+"key": "destructive_force",
+"kind": "active",
+"name": "Devastating Power",
+"icon": "destructive_force.png"
+},
+{
+"id": "o_pass_skill_thrift",
+"key": "thrift",
+"kind": "passive",
+"name": "Dexterity",
+"icon": "thrift.png"
+},
+{
+"id": "o_skill_planar_exchange_ico",
+"key": "planar_exchange",
+"kind": "active",
+"name": "Dimensional Shift",
+"icon": "planar_exchange.png"
+},
+{
+"id": "o_skill_disarm_ico",
+"key": "disarm",
+"kind": "active",
+"name": "Disarm"
+},
+{
+"id": "o_pass_skill_disengage",
+"key": "disengage",
+"kind": "passive",
+"name": "Disengage",
+"icon": "disengage.png"
+},
+{
+"id": "o_skill_dismember_ico",
+"key": "dismember",
+"kind": "active",
+"name": "Dismember",
+"icon": "dismember.png"
+},
+{
+"id": "o_pass_skill_dispersion",
+"key": "dispersion",
+"kind": "passive",
+"name": "Dissipation",
+"icon": "dispersion.png"
+},
+{
+"id": "o_skill_distracting_shot_ico",
+"key": "distracting_shot",
+"kind": "active",
+"name": "Distracting Shot",
+"icon": "distracting_shot.png"
+},
+{
+"id": "o_skill_double_jab_ico",
+"key": "double_jab",
+"kind": "active",
+"name": "Double Lunge",
+"icon": "double_jab.png"
+},
+{
+"id": "o_skill_vampire_rune_ico",
+"key": "vampire_rune",
+"kind": "active",
+"name": "Draining Sigil"
+},
+{
+"id": "o_skill_drink_potion_ico",
+"key": "drink_potion",
+"kind": "active",
+"name": "Drink Potion",
+"icon": "drink_potion.png"
+},
+{
+"id": "o_skill_drums_of_war_ico",
+"key": "drums_of_war",
+"kind": "active",
+"name": "Drums of War",
+"icon": "drums_of_war.png"
+},
+{
+"id": "o_pass_skill_dual_wielding_training",
+"key": "dual_wielding_training",
+"kind": "passive",
+"name": "Dual Wielding Training"
+},
+{
+"id": "o_pass_skill_Dusk_Warrior",
+"key": "Dusk_Warrior",
+"kind": "passive",
+"name": "Dusk Warrior"
+},
+{
+"id": "o_pass_skill_dying_fervor",
+"key": "dying_fervor",
+"kind": "passive",
+"name": "Dying Fervor"
+},
+{
+"id": "o_skill_earth_quake_ico",
+"key": "earth_quake",
+"kind": "active",
+"name": "Earthquake",
+"icon": "earth_quake.png"
+},
+{
+"id": "o_skill_tremor_strike_troll_ico",
+"key": "tremor_strike_troll",
+"kind": "active",
+"name": "Earthshaking Strike"
+},
+{
+"id": "o_skill_tremor_strike_ico",
+"key": "tremor_strike",
+"kind": "active",
+"name": "Earthshaking Strike",
+"icon": "tremor_strike.png"
+},
+{
+"id": "o_skill_lay_the_eggs_ico",
+"key": "lay_the_eggs",
+"kind": "active",
+"name": "Egg Clutch",
+"icon": "lay_the_eggs.png"
+},
+{
+"id": "o_pass_skill_electrical_potancial",
+"key": "electrical_potancial",
+"kind": "passive",
+"name": "Electrical Potancial"
+},
+{
+"id": "o_pass_skill_Sudden_Attacks",
+"key": "Sudden_Attacks",
+"kind": "passive",
+"name": "Element of Surprise"
+},
+{
+"id": "o_skill_elusiveness_ico",
+"key": "elusiveness",
+"kind": "active",
+"name": "Elusiveness",
+"icon": "elusiveness.png"
+},
+{
+"id": "o_pass_skill_ultimate_resilience",
+"key": "ultimate_resilience",
+"kind": "passive",
+"name": "Embodiment of Resilience",
+"icon": "ultimate_resilience.png"
+},
+{
+"id": "o_skill_embrace_the_murk_ico",
+"key": "embrace_the_murk",
+"kind": "active",
+"name": "Embrace the Murk",
+"icon": "embrace_the_murk.png"
+},
+{
+"id": "o_skill_emergency_repair_ico",
+"key": "emergency_repair",
+"kind": "active",
+"name": "Emergency Repair"
+},
+{
+"id": "o_skill_enough_for_everyone_ico",
+"key": "enough_for_everyone",
+"kind": "active",
+"name": "Enough for Everyone",
+"icon": "enough_for_everyone.png"
+},
+{
+"id": "o_pass_skill_extraplanar_geometry",
+"key": "extraplanar_geometry",
+"kind": "passive",
+"name": "Entropy Flare",
+"icon": "extraplanar_geometry.png"
+},
+{
+"id": "o_pass_skill_lightning_reflexes",
+"key": "lightning_reflexes",
+"kind": "passive",
+"name": "Ever Vigilant"
+},
+{
+"id": "o_skill_ripper_claws_ico",
+"key": "ripper_claws",
+"kind": "active",
+"name": "Eviscerating Claws",
+"icon": "ripper_claws.png"
+},
+{
+"id": "o_skill_trap_search_ico",
+"key": "trap_search",
+"kind": "active",
+"name": "Examine Surroundings"
+},
+{
+"id": "o_pass_skill_excess_heat",
+"key": "excess_heat",
+"kind": "passive",
+"name": "Excess Heat"
+},
+{
+"id": "o_skill_execution_ico",
+"key": "execution",
+"kind": "active",
+"name": "Execution",
+"icon": "execution.png"
+},
+{
+"id": "o_skill_grimace_of_terror_ico",
+"key": "grimace_of_terror",
+"kind": "active",
+"name": "Face of Horror"
+},
+{
+"id": "o_skill_false_promises_ico",
+"key": "false_promises",
+"kind": "active",
+"name": "False Promises",
+"icon": "false_promises.png"
+},
+{
+"id": "o_pass_skill_fatal_hit",
+"key": "fatal_hit",
+"kind": "passive",
+"name": "Fatal Strike",
+"icon": "fatal_hit.png"
+},
+{
+"id": "o_skill_steel_feast_ico",
+"key": "steel_feast",
+"kind": "active",
+"name": "Feast of Steel",
+"icon": "steel_feast.png"
+},
+{
+"id": "o_pass_skill_feed_the_flames",
+"key": "feed_the_flames",
+"kind": "passive",
+"name": "Feed the Flames",
+"icon": "feed_the_flames.png"
+},
+{
+"id": "o_skill_fencer_stance_ico",
+"key": "fencer_stance",
+"kind": "active",
+"name": "Fencer Stance",
+"icon": "fencer_stance.png"
+},
+{
+"id": "o_pass_skill_ferocity",
+"key": "ferocity",
+"kind": "passive",
+"name": "Ferocity",
+"icon": "ferocity.png"
+},
+{
+"id": "o_skill_coals_and_embers_ico",
+"key": "coals_and_embers",
+"kind": "active",
+"name": "Fiery Embers",
+"icon": "coals_and_embers.png"
+},
+{
+"id": "o_pass_skill_fight_to_death",
+"key": "fight_to_death",
+"kind": "passive",
+"name": "Fight to the Death",
+"icon": "fight_to_death.png"
+},
+{
+"id": "o_pass_skill_last_effort",
+"key": "last_effort",
+"kind": "passive",
+"name": "Final Push",
+"icon": "last_effort.png"
+},
+{
+"id": "o_pass_skill_finish_him",
+"key": "finish_him",
+"kind": "passive",
+"name": "Finish `Em!",
+"icon": "finish_him.png"
+},
+{
+"id": "o_skill_finisher_ico",
+"key": "finisher",
+"kind": "active",
+"name": "Finisher",
+"icon": "finisher.png"
+},
+{
+"id": "o_skill_fire_barrage_ico",
+"key": "fire_barrage",
+"kind": "active",
+"name": "Fire Barrage",
+"icon": "fire_barrage.png"
+},
+{
+"id": "o_skill_first_aid_ico",
+"key": "first_aid",
+"kind": "active",
+"name": "First Aid",
+"icon": "first_aid.png"
+},
+{
+"id": "o_skill_throw_fire_bomb_ico",
+"key": "throw_fire_bomb",
+"kind": "active",
+"name": "Flame Flask Throw",
+"icon": "throw_fire_bomb.png"
+},
+{
+"id": "o_pass_skill_flame_saturation",
+"key": "flame_saturation",
+"kind": "passive",
+"name": "Flame Saturation",
+"icon": "flame_saturation.png"
+},
+{
+"id": "o_skill_flame_wave_ico",
+"key": "flame_wave",
+"kind": "active",
+"name": "Flame Wave",
+"icon": "flame_wave.png"
+},
+{
+"id": "o_skill_flesh_pile_ico",
+"key": "flesh_pile",
+"kind": "active",
+"name": "Flesh Pile"
+},
+{
+"id": "o_skill_active_defence_ico",
+"key": "active_defence",
+"kind": "active",
+"name": "Flexible Defense"
+},
+{
+"id": "o_skill_fling_away_ico",
+"key": "fling_away",
+"kind": "active",
+"name": "Fling Away",
+"icon": "fling_away.png"
+},
+{
+"id": "o_skill_series_of_strikes_ico",
+"key": "series_of_strikes",
+"kind": "active",
+"name": "Flurry of Strikes",
+"icon": "series_of_strikes.png"
+},
+{
+"id": "o_skill_for_whom_the_bell_tolls_ico",
+"key": "for_whom_the_bell_tolls",
+"kind": "active",
+"name": "For Whom the Bell Tolls",
+"icon": "for_whom_the_bell_tolls.png"
+},
+{
+"id": "o_skill_forceful_slam_ico",
+"key": "forceful_slam",
+"kind": "active",
+"name": "Forceful Slam",
+"icon": "forceful_slam.png"
+},
+{
+"id": "o_pass_skill_magic_lore",
+"key": "magic_lore",
+"kind": "passive",
+"name": "Forgotten Lore",
+"icon": "magic_lore.png"
+},
+{
+"id": "o_skill_wicked_hunt_ico",
+"key": "wicked_hunt",
+"kind": "active",
+"name": "Frenzied Hunt",
+"icon": "wicked_hunt.png"
+},
+{
+"id": "o_pass_skill_safe_distance",
+"key": "safe_distance",
+"kind": "passive",
+"name": "From Blaze to Furnace",
+"icon": "safe_distance.png"
+},
+{
+"id": "o_pass_skill_from_the_shadow",
+"key": "from_the_shadow",
+"kind": "passive",
+"name": "From the Shadows"
+},
+{
+"id": "o_skill_gaping_wound_ico",
+"key": "gaping_wound",
+"kind": "active",
+"name": "Gaping Wound",
+"icon": "gaping_wound.png"
+},
+{
+"id": "o_pass_skill_gloat",
+"key": "gloat",
+"kind": "passive",
+"name": "Gloat",
+"icon": "gloat.png"
+},
+{
+"id": "o_skill_grab_em_ico",
+"key": "grab_em",
+"kind": "active",
+"name": "Grab 'Em!",
+"icon": "grab_em.png"
+},
+{
+"id": "o_skill_grave_cold_ico",
+"key": "grave_cold",
+"kind": "active",
+"name": "Grave Chill",
+"icon": "grave_cold.png"
+},
+{
+"id": "o_skill_elder_ritual_of_resurrection_ico",
+"key": "elder_ritual_of_resurrection",
+"kind": "active",
+"name": "Greater Ritual of Resurrection"
+},
+{
+"id": "o_skill_hail_of_blows_ico",
+"key": "hail_of_blows",
+"kind": "active",
+"name": "Hail of Blows",
+"icon": "hail_of_blows.png"
+},
+{
+"id": "o_skill_hammer_and_anvil_ico",
+"key": "hammer_and_anvil",
+"kind": "active",
+"name": "Hammer and Anvil",
+"icon": "hammer_and_anvil.png"
+},
+{
+"id": "o_pass_skill_hard_target",
+"key": "hard_target",
+"kind": "passive",
+"name": "Hard Target"
+},
+{
+"id": "o_skill_throw_axe_ico",
+"key": "throw_axe",
+"kind": "active",
+"name": "Hatchet Throw",
+"icon": "throw_axe.png"
+},
+{
+"id": "o_skill_headshot_ico",
+"key": "headshot",
+"kind": "active",
+"name": "Headshot",
+"icon": "headshot.png"
+},
+{
+"id": "o_skill_herald_of_ruination_ico",
+"key": "herald_of_ruination",
+"kind": "active",
+"name": "Herald of Ruination",
+"icon": "herald_of_ruination.png"
+},
+{
+"id": "o_skill_heroic_charge_ico",
+"key": "heroic_charge",
+"kind": "active",
+"name": "Heroic Charge",
+"icon": "heroic_charge.png"
+},
+{
+"id": "o_skill_feint_swing_ico",
+"key": "feint_swing",
+"kind": "active",
+"name": "Hewing Strike",
+"icon": "feint_swing.png"
+},
+{
+"id": "o_skill_defensive_stance_ico",
+"key": "defensive_stance",
+"kind": "active",
+"name": "Hold the Line!",
+"icon": "defensive_stance.png"
+},
+{
+"id": "o_pass_skill_sharpened_edge",
+"key": "sharpened_edge",
+"kind": "passive",
+"name": "Honed Edge"
+},
+{
+"id": "o_skill_wide_cut_ico",
+"key": "wide_cut",
+"kind": "active",
+"name": "Hooking Chop",
+"icon": "wide_cut.png"
+},
+{
+"id": "o_skill_howl_ico",
+"key": "howl",
+"kind": "active",
+"name": "Howl",
+"icon": "howl.png"
+},
+{
+"id": "o_skill_hunters_mark_ico",
+"key": "hunters_mark",
+"kind": "active",
+"name": "Hunter's Mark",
+"icon": "hunters_mark.png"
+},
+{
+"id": "o_pass_skill_huntmaster",
+"key": "huntmaster",
+"kind": "passive",
+"name": "Huntmaster",
+"icon": "huntmaster.png"
+},
+{
+"id": "o_skill_piercing_lunge_ico",
+"key": "piercing_lunge",
+"kind": "active",
+"name": "Impaling Lunge",
+"icon": "piercing_lunge.png"
+},
+{
+"id": "o_pass_skill_impenetrable_armor",
+"key": "impenetrable_armor",
+"kind": "passive",
+"name": "Impenetrable Armor"
+},
+{
+"id": "o_skill_impulse_ico",
+"key": "impulse",
+"kind": "active",
+"name": "Impulse",
+"icon": "impulse.png"
+},
+{
+"id": "o_pass_skill_inaudible_steps",
+"key": "inaudible_steps",
+"kind": "passive",
+"name": "Inaudible Steps"
+},
+{
+"id": "o_skill_incineration_ico",
+"key": "incineration",
+"kind": "active",
+"name": "Incineration"
+},
+{
+"id": "o_skill_inferno_ico",
+"key": "inferno",
+"kind": "active",
+"name": "Inferno",
+"icon": "inferno.png"
+},
+{
+"id": "o_pass_skill_inner_reserves",
+"key": "inner_reserves",
+"kind": "passive",
+"name": "Inner Reserves",
+"icon": "inner_reserves.png"
+},
+{
+"id": "o_skill_instigate_ico",
+"key": "instigate",
+"kind": "active",
+"name": "Instigate",
+"icon": "instigate.png"
+},
+{
+"id": "o_pass_skill_intimidation",
+"key": "intimidation",
+"kind": "passive",
+"name": "Intimidation",
+"icon": "intimidation.png"
+},
+{
+"id": "o_skill_discharge_ico",
+"key": "discharge",
+"kind": "active",
+"name": "Jolt",
+"icon": "discharge.png"
+},
+{
+"id": "o_skill_judgement_day_ico",
+"key": "judgement_day",
+"kind": "active",
+"name": "Judgement Day",
+"icon": "judgement_day.png"
+},
+{
+"id": "o_skill_backwards_dash_ico",
+"key": "backwards_dash",
+"kind": "active",
+"name": "Jump Away",
+"icon": "backwards_dash.png"
+},
+{
+"id": "o_pass_skill_blow_after_blow",
+"key": "blow_after_blow",
+"kind": "passive",
+"name": "Keep Them Coming",
+"icon": "blow_after_blow.png"
+},
+{
+"id": "o_skill_keeping_distance_ico",
+"key": "keeping_distance",
+"kind": "active",
+"name": "Keeping Distance"
+},
+{
+"id": "o_skill_knockout_ico",
+"key": "knockout",
+"kind": "active",
+"name": "Knock Out",
+"icon": "knockout.png"
+},
+{
+"id": "o_skill_bloodletting_ico",
+"key": "bloodletting",
+"kind": "active",
+"name": "Lacerate",
+"icon": "bloodletting.png"
+},
+{
+"id": "o_skill_lash_blessing_ico",
+"key": "lash_blessing",
+"kind": "active",
+"name": "Lash Blessing",
+"icon": "lash_blessing.png"
+},
+{
+"id": "o_pass_skill_last_bastion",
+"key": "last_bastion",
+"kind": "passive",
+"name": "Last Bastion",
+"icon": "last_bastion.png"
+},
+{
+"id": "o_skill_final_stand_ico",
+"key": "final_stand",
+"kind": "active",
+"name": "Last Stand"
+},
+{
+"id": "o_skill_sweep_ico",
+"key": "sweep",
+"kind": "active",
+"name": "Leg Sweep",
+"icon": "sweep.png"
+},
+{
+"id": "o_skill_dark_ressurection_ico",
+"key": "dark_ressurection",
+"kind": "active",
+"name": "Lesser Ritual of Resurrection"
+},
+{
+"id": "o_skill_life_leech_ico",
+"key": "life_leech",
+"kind": "active",
+"name": "Life Leech",
+"icon": "life_leech.png"
+},
+{
+"id": "o_skill_lightning_enchantment_ico",
+"key": "lightning_enchantment",
+"kind": "active",
+"name": "Lightning Enchantment"
+},
+{
+"id": "o_pass_skill_lingering_incantations",
+"key": "lingering_incantations",
+"kind": "passive",
+"name": "Lingering Incantations",
+"icon": "lingering_incantations.png"
+},
+{
+"id": "o_skill_lion_charge_ico",
+"key": "lion_charge",
+"kind": "active",
+"name": "Lion Leap",
+"icon": "lion_charge.png"
+},
+{
+"id": "o_skill_long_range_shot_ico",
+"key": "long_range_shot",
+"kind": "active",
+"name": "Long Shot",
+"icon": "long_range_shot.png"
+},
+{
+"id": "o_skill_loud_barking_ico",
+"key": "loud_barking",
+"kind": "active",
+"name": "Loud Barking",
+"icon": "loud_barking.png"
+},
+{
+"id": "o_skill_magma_rain_ico",
+"key": "magma_rain",
+"kind": "active",
+"name": "Magma Rain",
+"icon": "magma_rain.png"
+},
+{
+"id": "o_pass_skill_maim_and_kill",
+"key": "maim_and_kill",
+"kind": "passive",
+"name": "Maim and Kill",
+"icon": "maim_and_kill.png"
+},
+{
+"id": "o_pass_skill_halt",
+"key": "halt",
+"kind": "passive",
+"name": "Make a Halt"
+},
+{
+"id": "o_skill_killing_swing_ico",
+"key": "killing_swing",
+"kind": "active",
+"name": "Make Space",
+"icon": "killing_swing.png"
+},
+{
+"id": "o_skill_mana_crystal_ico",
+"key": "mana_crystal",
+"kind": "active",
+"name": "Mana Crystal",
+"icon": "mana_crystal.png"
+},
+{
+"id": "o_skill_mana_siphoning_ico",
+"key": "mana_siphoning",
+"kind": "active",
+"name": "Mana Siphon",
+"icon": "mana_siphoning.png"
+},
+{
+"id": "o_skill_mark_of_the_feast_ico",
+"key": "mark_of_the_feast",
+"kind": "active",
+"name": "Mark of the Feast",
+"icon": "mark_of_the_feast.png"
+},
+{
+"id": "o_skill_massacre_ico",
+"key": "massacre",
+"kind": "active",
+"name": "Massacre",
+"icon": "massacre.png"
+},
+{
+"id": "o_skill_melting_ray_ico",
+"key": "melting_ray",
+"kind": "active",
+"name": "Melting Ray",
+"icon": "melting_ray.png"
+},
+{
+"id": "o_skill_power_kick_ico",
+"key": "power_kick",
+"kind": "active",
+"name": "Mighty Kick",
+"icon": "power_kick.png"
+},
+{
+"id": "o_skill_mighty_swing_ico",
+"key": "mighty_swing",
+"kind": "active",
+"name": "Mighty Swing"
+},
+{
+"id": "o_pass_skill_moment_of_retribution",
+"key": "moment_of_retribution",
+"kind": "passive",
+"name": "Moment of Retribution",
+"icon": "moment_of_retribution.png"
+},
+{
+"id": "o_pass_skill_moment_of_weakness",
+"key": "moment_of_weakness",
+"kind": "passive",
+"name": "Moment of Weakness",
+"icon": "moment_of_weakness.png"
+},
+{
+"id": "o_pass_skill_more_blood",
+"key": "more_blood",
+"kind": "passive",
+"name": "More Blood!"
+},
+{
+"id": "o_skill_motherly_blessing_ico",
+"key": "motherly_blessing",
+"kind": "active",
+"name": "Motherly Blessing",
+"icon": "motherly_blessing.png"
+},
+{
+"id": "o_skill_murk_strike_ico",
+"key": "murk_strike",
+"kind": "active",
+"name": "Murkstrike",
+"icon": "murk_strike.png"
+},
+{
+"id": "o_skill_murkwalk_ico",
+"key": "murkwalk",
+"kind": "active",
+"name": "Murkwalk",
+"icon": "murkwalk.png"
+},
+{
+"id": "o_skill_crippling_lunge_ico",
+"key": "crippling_lunge",
+"kind": "active",
+"name": "Mutilating Lunge"
+},
+{
+"id": "o_skill_nail_down_ico",
+"key": "nail_down",
+"kind": "active",
+"name": "Nail Down",
+"icon": "nail_down.png"
+},
+{
+"id": "o_skill_necrophagy_ico",
+"key": "necrophagy",
+"kind": "active",
+"name": "Necrophage",
+"icon": "necrophagy.png"
+},
+{
+"id": "o_skill_net_throw_ico",
+"key": "net_throw",
+"kind": "active",
+"name": "Net Throw",
+"icon": "net_throw.png"
+},
+{
+"id": "o_pass_skill_show_no_mercy",
+"key": "show_no_mercy",
+"kind": "passive",
+"name": "No Mercy",
+"icon": "show_no_mercy.png"
+},
+{
+"id": "o_pass_skill_no_retreat",
+"key": "no_retreat",
+"kind": "passive",
+"name": "No Retreat"
+},
+{
+"id": "o_pass_skill_no_time_to_linger",
+"key": "no_time_to_linger",
+"kind": "passive",
+"name": "No Time to Linger",
+"icon": "no_time_to_linger.png"
+},
+{
+"id": "o_pass_skill_never_again",
+"key": "never_again",
+"kind": "passive",
+"name": "Not This Time",
+"icon": "never_again.png"
+},
+{
+"id": "o_pass_skill_now_or_never",
+"key": "now_or_never",
+"kind": "passive",
+"name": "Now or Never",
+"icon": "now_or_never.png"
+},
+{
+"id": "o_skill_sickening_vapours_ico",
+"key": "sickening_vapours",
+"kind": "active",
+"name": "Noxious Vapours",
+"icon": "sickening_vapours.png"
+},
+{
+"id": "o_skill_oath_of_guidance_ico",
+"key": "oath_of_guidance",
+"kind": "active",
+"name": "Oath of Guidance",
+"icon": "oath_of_guidance.png"
+},
+{
+"id": "o_skill_oath_of_protection_ico",
+"key": "oath_of_protection",
+"kind": "active",
+"name": "Oath of Protection",
+"icon": "oath_of_protection.png"
+},
+{
+"id": "o_skill_oath_of_retribution_ico",
+"key": "oath_of_retribution",
+"kind": "active",
+"name": "Oath of Retribution",
+"icon": "oath_of_retribution.png"
+},
+{
+"id": "o_skill_offensive_tactics_ico",
+"key": "offensive_tactics",
+"kind": "active",
+"name": "Offensive Tactic",
+"icon": "offensive_tactics.png"
+},
+{
+"id": "o_pass_skill_one_at_a_time",
+"key": "one_at_a_time",
+"kind": "passive",
+"name": "One at a Time!"
+},
+{
+"id": "o_pass_skill_one_on_one",
+"key": "one_on_one",
+"kind": "passive",
+"name": "One On One"
+},
+{
+"id": "o_skill_advance_ico",
+"key": "advance",
+"kind": "active",
+"name": "Onrush",
+"icon": "advance.png"
+},
+{
+"id": "o_skill_onslaught_ico",
+"key": "onslaught",
+"kind": "active",
+"name": "Onslaught",
+"icon": "onslaught.png"
+},
+{
+"id": "o_pass_skill_opportune_moment",
+"key": "opportune_moment",
+"kind": "passive",
+"name": "Opportune Moment",
+"icon": "opportune_moment.png"
+},
+{
+"id": "o_skill_painful_stabs_ico",
+"key": "painful_stabs",
+"kind": "active",
+"name": "Painful Stabs",
+"icon": "painful_stabs.png"
+},
+{
+"id": "o_skill_riposte_ico",
+"key": "riposte",
+"kind": "active",
+"name": "Parry"
+},
+{
+"id": "o_pass_skill_trailblazer",
+"key": "trailblazer",
+"kind": "passive",
+"name": "Pathfinder",
+"icon": "trailblazer.png"
+},
+{
+"id": "o_skill_peacemaker_ico",
+"key": "peacemaker",
+"kind": "active",
+"name": "Peacemaker",
+"icon": "peacemaker.png"
+},
+{
+"id": "o_pass_skill_peak_performance",
+"key": "peak_performance",
+"kind": "passive",
+"name": "Peak Performance"
+},
+{
+"id": "o_skill_peck_ico",
+"key": "peck",
+"kind": "active",
+"name": "Peck",
+"icon": "peck.png"
+},
+{
+"id": "o_skill_petrification_ico",
+"key": "petrification",
+"kind": "active",
+"name": "Petrification",
+"icon": "petrification.png"
+},
+{
+"id": "o_skill_astral_phantasm_ico",
+"key": "astral_phantasm",
+"kind": "active",
+"name": "Phantasm",
+"icon": "astral_phantasm.png"
+},
+{
+"id": "o_skill_phantom_bats_ico",
+"key": "phantom_bats",
+"kind": "active",
+"name": "Phantom Bats",
+"icon": "phantom_bats.png"
+},
+{
+"id": "o_skill_pikemans_stance_ico",
+"key": "pikemans_stance",
+"kind": "active",
+"name": "Pikeman Stance",
+"icon": "pikemans_stance.png"
+},
+{
+"id": "o_skill_jagged_spike_ico",
+"key": "jagged_spike",
+"kind": "active",
+"name": "Poisoned Spike",
+"icon": "jagged_spike.png"
+},
+{
+"id": "o_pass_skill_potential_difference",
+"key": "potential_difference",
+"kind": "passive",
+"name": "Potential Difference",
+"icon": "potential_difference.png"
+},
+{
+"id": "o_pass_skill_precise_hits",
+"key": "precise_hits",
+"kind": "passive",
+"name": "Precise Hits"
+},
+{
+"id": "o_pass_skill_precise_movements",
+"key": "precise_movements",
+"kind": "passive",
+"name": "Precise Movements"
+},
+{
+"id": "o_pass_skill_precision",
+"key": "precision",
+"kind": "passive",
+"name": "Precision",
+"icon": "precision.png"
+},
+{
+"id": "o_skill_predigest_ico",
+"key": "predigest",
+"kind": "active",
+"name": "Predigest",
+"icon": "predigest.png"
+},
+{
+"id": "o_skill_primal_aether_ico",
+"key": "primal_aether",
+"kind": "active",
+"name": "Primal Aether",
+"icon": "primal_aether.png"
+},
+{
+"id": "o_skill_protect_the_hive_ico",
+"key": "protect_the_hive",
+"kind": "active",
+"name": "Protect the Hive",
+"icon": "protect_the_hive.png"
+},
+{
+"id": "o_pass_skill_vivifying_violence",
+"key": "vivifying_violence",
+"kind": "passive",
+"name": "Push the Falling",
+"icon": "vivifying_violence.png"
+},
+{
+"id": "o_pass_skill_pyromania",
+"key": "pyromania",
+"kind": "passive",
+"name": "Pyromania",
+"icon": "pyromania.png"
+},
+{
+"id": "o_pass_skill_quick_change",
+"key": "quick_change",
+"kind": "passive",
+"name": "Quick Hands",
+"icon": "quick_change.png"
+},
+{
+"id": "o_skill_raise_shield_ico",
+"key": "raise_shield",
+"kind": "active",
+"name": "Raise Shield",
+"icon": "raise_shield.png"
+},
+{
+"id": "o_skill_charge_ram_ico",
+"key": "charge_ram",
+"kind": "active",
+"name": "Ramming Charge"
+},
+{
+"id": "o_skill_rampage_ico",
+"key": "rampage",
+"kind": "active",
+"name": "Rampage",
+"icon": "rampage.png"
+},
+{
+"id": "o_skill_rapid_flight_ico",
+"key": "rapid_flight",
+"kind": "active",
+"name": "Rapid Flight",
+"icon": "rapid_flight.png"
+},
+{
+"id": "o_pass_skill_recharge",
+"key": "recharge",
+"kind": "passive",
+"name": "Recharge",
+"icon": "recharge.png"
+},
+{
+"id": "o_pass_skill_recklessness",
+"key": "recklessness",
+"kind": "passive",
+"name": "Recklessness"
+},
+{
+"id": "o_skill_regroup_ico",
+"key": "regroup",
+"kind": "active",
+"name": "Regroup",
+"icon": "regroup.png"
+},
+{
+"id": "o_skill_regurgitate_ico",
+"key": "regurgitate",
+"kind": "active",
+"name": "Regurgitate",
+"icon": "regurgitate.png"
+},
+{
+"id": "o_skill_reign_in_blood_ico",
+"key": "reign_in_blood",
+"kind": "active",
+"name": "Reign in Blood",
+"icon": "reign_in_blood.png"
+},
+{
+"id": "o_skill_lacerate_ico",
+"key": "lacerate",
+"kind": "active",
+"name": "Rend Flesh",
+"icon": "lacerate.png"
+},
+{
+"id": "o_pass_skill_reprisal",
+"key": "reprisal",
+"kind": "passive",
+"name": "Reprisal",
+"icon": "reprisal.png"
+},
+{
+"id": "o_skill_deny_the_gift_ico",
+"key": "deny_the_gift",
+"kind": "active",
+"name": "Rescind the Gift",
+"icon": "deny_the_gift.png"
+},
+{
+"id": "o_pass_skill_residual_charge",
+"key": "residual_charge",
+"kind": "passive",
+"name": "Residual Charge",
+"icon": "residual_charge.png"
+},
+{
+"id": "o_pass_skill_resonance_cascade",
+"key": "resonance_cascade",
+"kind": "passive",
+"name": "Resonance Cascade",
+"icon": "resonance_cascade.png"
+},
+{
+"id": "o_pass_skill_resourcefulness",
+"key": "resourcefulness",
+"kind": "passive",
+"name": "Resourcefulness"
+},
+{
+"id": "o_pass_skill_respite",
+"key": "respite",
+"kind": "passive",
+"name": "Respite",
+"icon": "respite.png"
+},
+{
+"id": "o_pass_skill_surprise_onrush",
+"key": "surprise_onrush",
+"kind": "passive",
+"name": "Retaliation",
+"icon": "surprise_onrush.png"
+},
+{
+"id": "o_pass_skill_revanche",
+"key": "revanche",
+"kind": "passive",
+"name": "Revanche",
+"icon": "revanche.png"
+},
+{
+"id": "o_pass_skill_revel_in_battle",
+"key": "revel_in_battle",
+"kind": "passive",
+"name": "Revel in Battle",
+"icon": "revel_in_battle.png"
+},
+{
+"id": "o_pass_skill_right_on_target",
+"key": "right_on_target",
+"kind": "passive",
+"name": "Right on Target",
+"icon": "right_on_target.png"
+},
+{
+"id": "o_skill_flame_ring_ico",
+"key": "flame_ring",
+"kind": "active",
+"name": "Ring of Fire",
+"icon": "flame_ring.png"
+},
+{
+"id": "o_skill_rock_toss_ico",
+"key": "rock_toss",
+"kind": "active",
+"name": "Rock Toss"
+},
+{
+"id": "o_pass_skill_rune_of_engulfment",
+"key": "rune_of_engulfment",
+"kind": "passive",
+"name": "Rune of Absorption"
+},
+{
+"id": "o_pass_skill_rune_of_binding",
+"key": "rune_of_binding",
+"kind": "passive",
+"name": "Rune of Binding"
+},
+{
+"id": "o_pass_skill_rune_of_power",
+"key": "rune_of_power",
+"kind": "passive",
+"name": "Rune of Cycle"
+},
+{
+"id": "o_pass_skill_rune_of_weakening",
+"key": "rune_of_weakening",
+"kind": "passive",
+"name": "Rune of Enfeeblement"
+},
+{
+"id": "o_pass_skill_rune_of_fortifying",
+"key": "rune_of_fortifying",
+"kind": "passive",
+"name": "Rune of Fortifying"
+},
+{
+"id": "o_pass_skill_rune_of_support",
+"key": "rune_of_support",
+"kind": "passive",
+"name": "Rune of Sustention"
+},
+{
+"id": "o_pass_skill_rune_of_impact",
+"key": "rune_of_impact",
+"kind": "passive",
+"name": "Rune of Unity"
+},
+{
+"id": "o_skill_runic_boulder_ico",
+"key": "runic_boulder",
+"kind": "active",
+"name": "Runic Boulder",
+"icon": "runic_boulder.png"
+},
+{
+"id": "o_skill_runic_explosion_ico",
+"key": "runic_explosion",
+"kind": "active",
+"name": "Runic Explosion",
+"icon": "runic_explosion.png"
+},
+{
+"id": "o_skill_sacrificial_blood_ico",
+"key": "sacrificial_blood",
+"kind": "active",
+"name": "Sacrificial Blood"
+},
+{
+"id": "o_skill_schism_ico",
+"key": "schism",
+"kind": "active",
+"name": "Schism",
+"icon": "schism.png"
+},
+{
+"id": "o_pass_skill_scorch",
+"key": "scorch",
+"kind": "passive",
+"name": "Scorch",
+"icon": "scorch.png"
+},
+{
+"id": "o_skill_seal_of_cleansing_ico",
+"key": "seal_of_cleansing",
+"kind": "active",
+"name": "Seal of Cleansing",
+"icon": "seal_of_cleansing.png"
+},
+{
+"id": "o_skill_seal_of_finesse_ico",
+"key": "seal_of_finesse",
+"kind": "active",
+"name": "Seal of Finesse",
+"icon": "seal_of_finesse.png"
+},
+{
+"id": "o_skill_seal_of_insight_ico",
+"key": "seal_of_insight",
+"kind": "active",
+"name": "Seal of Insight",
+"icon": "seal_of_insight.png"
+},
+{
+"id": "o_skill_seal_of_power_ico",
+"key": "seal_of_power",
+"kind": "active",
+"name": "Seal of Power",
+"icon": "seal_of_power.png"
+},
+{
+"id": "o_skill_seal_of_reflection_ico",
+"key": "seal_of_reflection",
+"kind": "active",
+"name": "Seal of Reflection",
+"icon": "seal_of_reflection.png"
+},
+{
+"id": "o_skill_seal_of_shackles_ico",
+"key": "seal_of_shackles",
+"kind": "active",
+"name": "Seal of Shackles",
+"icon": "seal_of_shackles.png"
+},
+{
+"id": "o_skill_seize_the_initiative_ico",
+"key": "seize_the_initiative",
+"kind": "active",
+"name": "Seize the Initiative",
+"icon": "seize_the_initiative.png"
+},
+{
+"id": "o_pass_skill_self_repair",
+"key": "self_repair",
+"kind": "passive",
+"name": "Self-Repair",
+"icon": "self_repair.png"
+},
+{
+"id": "o_skill_torch_strike_ico",
+"key": "torch_strike",
+"kind": "active",
+"name": "Set Aflame",
+"icon": "torch_strike.png"
+},
+{
+"id": "o_pass_skill_preparation",
+"key": "preparation",
+"kind": "passive",
+"name": "Setup",
+"icon": "preparation.png"
+},
+{
+"id": "o_pass_skill_heavy_concussion",
+"key": "heavy_concussion",
+"kind": "passive",
+"name": "Severe Concussion",
+"icon": "heavy_concussion.png"
+},
+{
+"id": "o_skill_ram_ico",
+"key": "ram",
+"kind": "active",
+"name": "Shield Bash",
+"icon": "ram.png"
+},
+{
+"id": "o_pass_skill_shieldbreaker",
+"key": "shieldbreaker",
+"kind": "passive",
+"name": "Shieldbreaker",
+"icon": "shieldbreaker.png"
+},
+{
+"id": "o_skill_shockwave_ico",
+"key": "shockwave",
+"kind": "active",
+"name": "Shockwave"
+},
+{
+"id": "o_pass_skill_control_shot",
+"key": "control_shot",
+"kind": "passive",
+"name": "Shoot to Kill",
+"icon": "control_shot.png"
+},
+{
+"id": "o_skill_short_circuit_ico",
+"key": "short_circuit",
+"kind": "active",
+"name": "Short Circuit",
+"icon": "short_circuit.png"
+},
+{
+"id": "o_skill_sic_em_ico",
+"key": "sic_em",
+"kind": "active",
+"name": "Sic!",
+"icon": "sic_em.png"
+},
+{
+"id": "o_skill_skull_crusher_ico",
+"key": "skull_crusher",
+"kind": "active",
+"name": "Skull Crusher",
+"icon": "skull_crusher.png"
+},
+{
+"id": "o_skill_sleep_ico",
+"key": "sleep",
+"kind": "active",
+"name": "Sleep"
+},
+{
+"id": "o_skill_soul_sacrifice_ico",
+"key": "soul_sacrifice",
+"kind": "active",
+"name": "Soul Sacrifice",
+"icon": "soul_sacrifice.png"
+},
+{
+"id": "o_skill_dissipation_ico",
+"key": "dissipation",
+"kind": "active",
+"name": "Spectral Haunting",
+"icon": "dissipation.png"
+},
+{
+"id": "o_skill_leap_forward_ico",
+"key": "leap_forward",
+"kind": "active",
+"name": "Spider Leap",
+"icon": "leap_forward.png"
+},
+{
+"id": "o_pass_skill_weak_spots",
+"key": "weak_spots",
+"kind": "passive",
+"name": "Spot Weakness",
+"icon": "weak_spots.png"
+},
+{
+"id": "o_pass_skill_sprint_training",
+"key": "sprint_training",
+"kind": "passive",
+"name": "Sprint Training"
+},
+{
+"id": "o_skill_pierce_through_missile_ico",
+"key": "pierce_through_missile",
+"kind": "active",
+"name": "Startling Volley"
+},
+{
+"id": "o_skill_stasis_ico",
+"key": "stasis",
+"kind": "active",
+"name": "Stasis",
+"icon": "stasis.png"
+},
+{
+"id": "o_skill_static_field_ico",
+"key": "static_field",
+"kind": "active",
+"name": "Static Field",
+"icon": "static_field.png"
+},
+{
+"id": "o_pass_skill_stay_out",
+"key": "stay_out",
+"kind": "passive",
+"name": "Stay Back!"
+},
+{
+"id": "o_pass_skill_stamina_training",
+"key": "stamina_training",
+"kind": "passive",
+"name": "Steady Tempo",
+"icon": "stamina_training.png"
+},
+{
+"id": "o_skill_essence_leech_ico",
+"key": "essence_leech",
+"kind": "active",
+"name": "Steal Essence",
+"icon": "essence_leech.png"
+},
+{
+"id": "o_skill_step_aside_ico",
+"key": "step_aside",
+"kind": "active",
+"name": "Step Aside!",
+"icon": "step_aside.png"
+},
+{
+"id": "o_skill_stone_armor_ico",
+"key": "stone_armor",
+"kind": "active",
+"name": "Stone Armor",
+"icon": "stone_armor.png"
+},
+{
+"id": "o_skill_stone_spikes_ico",
+"key": "stone_spikes",
+"kind": "active",
+"name": "Stone Spikes",
+"icon": "stone_spikes.png"
+},
+{
+"id": "o_skill_strangling_grasp_ico",
+"key": "strangling_grasp",
+"kind": "active",
+"name": "Strangling Grasp"
+},
+{
+"id": "o_skill_mayhem_ico",
+"key": "mayhem",
+"kind": "active",
+"name": "Striker Stance",
+"icon": "mayhem.png"
+},
+{
+"id": "o_pass_skill_study_of_anatomy",
+"key": "study_of_anatomy",
+"kind": "passive",
+"name": "Study Of Anatomy"
+},
+{
+"id": "o_skill_sudden_strike_ico",
+"key": "sudden_strike",
+"kind": "active",
+"name": "Sudden Lunge",
+"icon": "sudden_strike.png"
+},
+{
+"id": "o_skill_summon_blood_golem_ico",
+"key": "summon_blood_golem",
+"kind": "active",
+"name": "Summon Blood Golem",
+"icon": "summon_blood_golem.png"
+},
+{
+"id": "o_skill_summon_the_bloodgorger_worm_ico",
+"key": "summon_the_bloodgorger_worm",
+"kind": "active",
+"name": "Summon Bloodgorger Worm",
+"icon": "summon_the_bloodgorger_worm.png"
+},
+{
+"id": "o_skill_spitter_leech_ico",
+"key": "spitter_leech",
+"kind": "active",
+"name": "Summon Spitter Worm",
+"icon": "spitter_leech.png"
+},
+{
+"id": "o_skill_summon_the_hive_ico",
+"key": "summon_the_hive",
+"kind": "active",
+"name": "Summon the Hive",
+"icon": "summon_the_hive.png"
+},
+{
+"id": "o_skill_summon_zombie_ico",
+"key": "summon_zombie",
+"kind": "active",
+"name": "Summon the Restless",
+"icon": "summon_zombie.png"
+},
+{
+"id": "o_skill_summon_thrall_ico",
+"key": "summon_thrall",
+"kind": "active",
+"name": "Summon Thrall",
+"icon": "summon_thrall.png"
+},
+{
+"id": "o_skill_summon_the_worm_ico",
+"key": "summon_the_worm",
+"kind": "active",
+"name": "Summon Worm",
+"icon": "summon_the_worm.png"
+},
+{
+"id": "o_skill_suppression_ico",
+"key": "suppression",
+"kind": "active",
+"name": "Suppression"
+},
+{
+"id": "o_skill_symphony_of_pain_ico",
+"key": "symphony_of_pain",
+"kind": "active",
+"name": "Symphony of Pain",
+"icon": "symphony_of_pain.png"
+},
+{
+"id": "o_pass_skill_stance_training",
+"key": "stance_training",
+"kind": "passive",
+"name": "Tactical Advantage",
+"icon": "stance_training.png"
+},
+{
+"id": "o_skill_taking_aim_ico",
+"key": "taking_aim",
+"kind": "active",
+"name": "Taking Aim",
+"icon": "taking_aim.png"
+},
+{
+"id": "o_skill_Tantum_ico",
+"key": "Tantum",
+"kind": "active",
+"name": "Tantum"
+},
+{
+"id": "o_skill_taste_the_flesh_ico",
+"key": "taste_the_flesh",
+"kind": "active",
+"name": "Taste for Flesh",
+"icon": "taste_the_flesh.png"
+},
+{
+"id": "o_pass_skill_taste_of_victory",
+"key": "taste_of_victory",
+"kind": "passive",
+"name": "Taste of Victory",
+"icon": "taste_of_victory.png"
+},
+{
+"id": "o_skill_tempest_ico",
+"key": "tempest",
+"kind": "active",
+"name": "Tempest",
+"icon": "tempest.png"
+},
+{
+"id": "o_skill_tentacle_arm_ico",
+"key": "tentacle_arm",
+"kind": "active",
+"name": "Tentacle Arm",
+"icon": "tentacle_arm.png"
+},
+{
+"id": "o_pass_skill_thaumaturgy",
+"key": "thaumaturgy",
+"kind": "passive",
+"name": "Thaumaturgy",
+"icon": "thaumaturgy.png"
+},
+{
+"id": "o_skill_thirst_for_battle_ico",
+"key": "thirst_for_battle",
+"kind": "active",
+"name": "Thirst for Battle",
+"icon": "thirst_for_battle.png"
+},
+{
+"id": "o_pass_skill_temporal_echo",
+"key": "temporal_echo",
+"kind": "passive",
+"name": "Time Echo",
+"icon": "temporal_echo.png"
+},
+{
+"id": "o_skill_tongue_leech_ico",
+"key": "tongue_leech",
+"kind": "active",
+"name": "Tongue Leech",
+"icon": "tongue_leech.png"
+},
+{
+"id": "o_skill_tongue_pull_ico",
+"key": "tongue_pull",
+"kind": "active",
+"name": "Tongue Pull",
+"icon": "tongue_pull.png"
+},
+{
+"id": "o_skill_tongue_push_ico",
+"key": "tongue_push",
+"kind": "active",
+"name": "Tongue Push",
+"icon": "tongue_push.png"
+},
+{
+"id": "o_pass_skill_weapon_of_execution",
+"key": "weapon_of_execution",
+"kind": "passive",
+"name": "Tool of Execution",
+"icon": "weapon_of_execution.png"
+},
+{
+"id": "o_pass_skill_tormenting_swings",
+"key": "tormenting_swings",
+"kind": "passive",
+"name": "Tormenting Swings",
+"icon": "tormenting_swings.png"
+},
+{
+"id": "o_skill_venomous_salvo_ico",
+"key": "venomous_salvo",
+"kind": "active",
+"name": "Toxic Salvo",
+"icon": "venomous_salvo.png"
+},
+{
+"id": "o_pass_skill_spatial_anchors",
+"key": "spatial_anchors",
+"kind": "passive",
+"name": "Transcendental Anchoring",
+"icon": "spatial_anchors.png"
+},
+{
+"id": "o_pass_skill_triumph",
+"key": "triumph",
+"kind": "passive",
+"name": "Triumph",
+"icon": "triumph.png"
+},
+{
+"id": "o_skill_troll_regeneration_ico",
+"key": "troll_regeneration",
+"kind": "active",
+"name": "Troll Regeneration"
+},
+{
+"id": "o_skill_tunnel_through_ico",
+"key": "tunnel_through",
+"kind": "active",
+"name": "Tunnel Through",
+"icon": "tunnel_through.png"
+},
+{
+"id": "o_pass_skill_balance_loss",
+"key": "balance_loss",
+"kind": "passive",
+"name": "Unbalance",
+"icon": "balance_loss.png"
+},
+{
+"id": "o_skill_dig_in_ico",
+"key": "dig_in",
+"kind": "active",
+"name": "Undermine",
+"icon": "dig_in.png"
+},
+{
+"id": "o_skill_unholy_anthems_ico",
+"key": "unholy_anthems",
+"kind": "active",
+"name": "Unholy Anthems",
+"icon": "unholy_anthems.png"
+},
+{
+"id": "o_skill_dark_blessing_ico",
+"key": "dark_blessing",
+"kind": "active",
+"name": "Unholy Blessing",
+"icon": "dark_blessing.png"
+},
+{
+"id": "o_skill_unholy_communion_ico",
+"key": "unholy_communion",
+"kind": "active",
+"name": "Unholy Communion",
+"icon": "unholy_communion.png"
+},
+{
+"id": "o_skill_unholy_ritual_ico",
+"key": "unholy_ritual",
+"kind": "active",
+"name": "Unholy Ritual",
+"icon": "unholy_ritual.png"
+},
+{
+"id": "o_pass_skill_unlimited_power",
+"key": "unlimited_power",
+"kind": "passive",
+"name": "Unlimited Power"
+},
+{
+"id": "o_pass_skill_unstoppable",
+"key": "unstoppable",
+"kind": "passive",
+"name": "Unstoppable"
+},
+{
+"id": "o_skill_unstoppable_force_ico",
+"key": "unstoppable_force",
+"kind": "active",
+"name": "Unstoppable Force"
+},
+{
+"id": "o_skill_unwavering_stance_ico",
+"key": "unwavering_stance",
+"kind": "active",
+"name": "Unwavering Stance",
+"icon": "unwavering_stance.png"
+},
+{
+"id": "o_skill_unyielding_defence_ico",
+"key": "unyielding_defence",
+"kind": "active",
+"name": "Unyielding Defense",
+"icon": "unyielding_defence.png"
+},
+{
+"id": "o_pass_skill_upper_hand",
+"key": "upper_hand",
+"kind": "passive",
+"name": "Upper Hand",
+"icon": "upper_hand.png"
+},
+{
+"id": "o_skill_vengeance_of_the_dead_ico",
+"key": "vengeance_of_the_dead",
+"kind": "active",
+"name": "Vengeance of the Dead"
+},
+{
+"id": "o_skill_vengeful_whiplash_ico",
+"key": "vengeful_whiplash",
+"kind": "active",
+"name": "Vengeful Lash",
+"icon": "vengeful_whiplash.png"
+},
+{
+"id": "o_skill_war_cry_ico",
+"key": "war_cry",
+"kind": "active",
+"name": "War Cry",
+"icon": "war_cry.png"
+},
+{
+"id": "o_pass_skill_weakening_jabs",
+"key": "weakening_jabs",
+"kind": "passive",
+"name": "Weakening Jabs",
+"icon": "weakening_jabs.png"
+},
+{
+"id": "o_skill_web_spit_ico",
+"key": "web_spit",
+"kind": "active",
+"name": "Web Spit",
+"icon": "web_spit.png"
+},
+{
+"id": "o_skill_whirlwind_ico",
+"key": "whirlwind",
+"kind": "active",
+"name": "Whirlwind",
+"icon": "whirlwind.png"
+},
+{
+"id": "o_skill_swipe_ico",
+"key": "swipe",
+"kind": "active",
+"name": "Wild Swipe",
+"icon": "swipe.png"
+},
+{
+"id": "o_skill_will_to_survive_ico",
+"key": "will_to_survive",
+"kind": "active",
+"name": "Will to Survive",
+"icon": "will_to_survive.png"
+},
+{
+"id": "o_skill_willing_sacrifice_ico",
+"key": "willing_sacrifice",
+"kind": "active",
+"name": "Willing Sacrifice",
+"icon": "willing_sacrifice.png"
+},
+{
+"id": "o_skill_enhanced_wormrot_ico",
+"key": "enhanced_wormrot",
+"kind": "active",
+"name": "Worm Feast"
+},
+{
+"id": "o_skill_wormrot_ico",
+"key": "wormrot",
+"kind": "active",
+"name": "Worm Food",
+"icon": "wormrot.png"
+},
+{
+"id": "o_skill_wormhole_ico",
+"key": "wormhole",
+"kind": "active",
+"name": "Wormhole",
+"icon": "wormhole.png"
+},
+{
+"id": "o_skill_worship_ico",
+"key": "worship",
+"kind": "active",
+"name": "Worship",
+"icon": "worship.png"
+},
+{
+"id": "o_pass_skill_wounding_spearhead",
+"key": "wounding_spearhead",
+"kind": "passive",
+"name": "Wounding Spearhead"
+},
+{
+"id": "o_skill_wraith_summoning_ico",
+"key": "wraith_summoning",
+"kind": "active",
+"name": "Wraith Summoning",
+"icon": "wraith_summoning.png"
+}
+],
+"trees": [
+{
+"name": "Swords",
+"group": "Weapons",
+"image": "swords.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Cleaving Strike",
+"x": 38,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_cleave_ico"
+},
+{
+"name": "Blade Maintenance",
+"x": 138,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_care_blade"
+},
+{
+"name": "Keeping Distance",
+"x": 238,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_keeping_distance_ico"
+},
+{
+"name": "Gloat",
+"x": 38,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_gloat"
+},
+{
+"name": "Fencer Stance",
+"x": 138,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_fencer_stance_ico"
+},
+{
+"name": "Steady Tempo",
+"x": 238,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_stamina_training"
+},
+{
+"name": "Honed Edge",
+"x": 88,
+"y": 376,
+"size": 62,
+"skillId": "o_pass_skill_sharpened_edge"
+},
+{
+"name": "Onrush",
+"x": 190,
+"y": 376,
+"size": 62,
+"skillId": "o_skill_advance_ico"
+}
+]
+},
+{
+"name": "Axes",
+"group": "Weapons",
+"image": "axes.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Mutilating Lunge",
+"x": 24,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_crippling_lunge_ico"
+},
+{
+"name": "Ferocity",
+"x": 100,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_ferocity"
+},
+{
+"name": "Cut Through",
+"x": 176,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_cut_through_ico"
+},
+{
+"name": "No Mercy",
+"x": 252,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_show_no_mercy"
+},
+{
+"name": "Reprisal",
+"x": 86,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_reprisal"
+},
+{
+"name": "Massacre",
+"x": 192,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_massacre_ico"
+},
+{
+"name": "Execution",
+"x": 86,
+"y": 377,
+"size": 62,
+"skillId": "o_skill_execution_ico"
+},
+{
+"name": "Tormenting Swings",
+"x": 192,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_tormenting_swings"
+}
+]
+},
+{
+"name": "Maces",
+"group": "Weapons",
+"image": "maces.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Onslaught",
+"x": 24,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_onslaught_ico"
+},
+{
+"name": "Dazing Strikes",
+"x": 100,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_dazing_strikes"
+},
+{
+"name": "Armor Break",
+"x": 176,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_armor_break_ico"
+},
+{
+"name": "Moment of Weakness",
+"x": 252,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_moment_of_weakness"
+},
+{
+"name": "Respite",
+"x": 62,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_respite"
+},
+{
+"name": "Hammer and Anvil",
+"x": 214,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_hammer_and_anvil_ico"
+},
+{
+"name": "Knock Out",
+"x": 62,
+"y": 377,
+"size": 62,
+"skillId": "o_skill_knockout_ico"
+},
+{
+"name": "Concussion",
+"x": 214,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_concussion"
+}
+]
+},
+{
+"name": "Daggers",
+"group": "Weapons",
+"image": "daggers.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Quick Hands",
+"x": 24,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_quick_change"
+},
+{
+"name": "Double Lunge",
+"x": 100,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_double_jab_ico"
+},
+{
+"name": "Gaping Wound",
+"x": 176,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_gaping_wound_ico"
+},
+{
+"name": "From the Shadows",
+"x": 252,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_from_the_shadow"
+},
+{
+"name": "Deadly Trick",
+"x": 62,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_deadly_trick_ico"
+},
+{
+"name": "Weakening Jabs",
+"x": 138,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_weakening_jabs"
+},
+{
+"name": "Painful Stabs",
+"x": 214,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_painful_stabs_ico"
+},
+{
+"name": "Counterattack Mastery",
+"x": 24,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_counterattack_mastery"
+},
+{
+"name": "Danse Macabre",
+"x": 100,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_dance_of_death"
+},
+{
+"name": "Coup de Grace",
+"x": 214,
+"y": 377,
+"size": 62,
+"skillId": "o_skill_coup_de_grace_ico"
+}
+]
+},
+{
+"name": "Two-Handed Swords",
+"group": "Weapons",
+"image": "twohandedswords.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Hewing Strike",
+"x": 62,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_feint_swing_ico"
+},
+{
+"name": "Revanche",
+"x": 138,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_revanche"
+},
+{
+"name": "Parry",
+"x": 214,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_riposte_ico"
+},
+{
+"name": "Recklessness",
+"x": 24,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_recklessness"
+},
+{
+"name": "Feast of Steel",
+"x": 100,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_steel_feast_ico"
+},
+{
+"name": "Arc Cleave",
+"x": 176,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_arc_cleave_ico"
+},
+{
+"name": "Fight to the Death",
+"x": 252,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_fight_to_death"
+},
+{
+"name": "Taste of Victory",
+"x": 24,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_taste_of_victory"
+},
+{
+"name": "Heroic Charge",
+"x": 138,
+"y": 377,
+"size": 62,
+"skillId": "o_skill_heroic_charge_ico"
+},
+{
+"name": "Courage",
+"x": 252,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_courage"
+}
+]
+},
+{
+"name": "Two-Handed Axes",
+"group": "Weapons",
+"image": "twohandedaxes.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Hooking Chop",
+"x": 62,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_wide_cut_ico"
+},
+{
+"name": "Shieldbreaker",
+"x": 138,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_shieldbreaker"
+},
+{
+"name": "Dismember",
+"x": 214,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_dismember_ico"
+},
+{
+"name": "Rampage",
+"x": 24,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_rampage_ico"
+},
+{
+"name": "Fatal Strike",
+"x": 100,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_fatal_hit"
+},
+{
+"name": "Finish `Em!",
+"x": 176,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_finish_him"
+},
+{
+"name": "Reign in Blood",
+"x": 252,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_reign_in_blood_ico"
+},
+{
+"name": "Tool of Execution",
+"x": 24,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_weapon_of_execution"
+},
+{
+"name": "Make Space",
+"x": 138,
+"y": 377,
+"size": 62,
+"skillId": "o_skill_killing_swing_ico"
+},
+{
+"name": "Maim and Kill",
+"x": 252,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_maim_and_kill"
+}
+]
+},
+{
+"name": "Two-Handed Maces",
+"group": "Weapons",
+"image": "twohandedmaces.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Keep Them Coming",
+"x": 24,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_blow_after_blow"
+},
+{
+"name": "Mighty Swing",
+"x": 100,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_mighty_swing_ico"
+},
+{
+"name": "Unstoppable Force",
+"x": 176,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_unstoppable_force_ico"
+},
+{
+"name": "Unbalance",
+"x": 252,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_balance_loss"
+},
+{
+"name": "Striker Stance",
+"x": 62,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_mayhem_ico"
+},
+{
+"name": "Bonebreaker (Two-Handed Mace skill)",
+"x": 138,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_bonebreaker"
+},
+{
+"name": "Forceful Slam",
+"x": 214,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_forceful_slam_ico"
+},
+{
+"name": "Revel in Battle",
+"x": 62,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_revel_in_battle"
+},
+{
+"name": "Skull Crusher",
+"x": 138,
+"y": 377,
+"size": 62,
+"skillId": "o_skill_skull_crusher_ico"
+},
+{
+"name": "Severe Concussion",
+"x": 214,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_heavy_concussion"
+}
+]
+},
+{
+"name": "Spears",
+"group": "Weapons",
+"image": "spears.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Precise Hits",
+"x": 24,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_precise_hits"
+},
+{
+"name": "Nail Down",
+"x": 100,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_nail_down_ico"
+},
+{
+"name": "Impaling Lunge",
+"x": 176,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_piercing_lunge_ico"
+},
+{
+"name": "No Retreat",
+"x": 252,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_no_retreat"
+},
+{
+"name": "Pikeman Stance",
+"x": 24,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_pikemans_stance_ico"
+},
+{
+"name": "Wounding Spearhead",
+"x": 138,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_wounding_spearhead"
+},
+{
+"name": "Determination",
+"x": 252,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_intransigence_ico"
+},
+{
+"name": "One at a Time!",
+"x": 24,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_one_at_a_time"
+},
+{
+"name": "Regroup",
+"x": 138,
+"y": 377,
+"size": 62,
+"skillId": "o_skill_regroup_ico"
+},
+{
+"name": "Stay Back!",
+"x": 252,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_stay_out"
+}
+]
+},
+{
+"name": "Ranged Weapons",
+"group": "Weapons",
+"image": "rangedweapons.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Taking Aim",
+"x": 24,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_taking_aim_ico"
+},
+{
+"name": "Constant Practice",
+"x": 100,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_constant_training"
+},
+{
+"name": "Dexterity",
+"x": 176,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_thrift"
+},
+{
+"name": "Distracting Shot",
+"x": 252,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_distracting_shot_ico"
+},
+{
+"name": "Spot Weakness",
+"x": 24,
+"y": 197,
+"size": 62,
+"skillId": "o_pass_skill_weak_spots"
+},
+{
+"name": "Startling Volley",
+"x": 100,
+"y": 197,
+"size": 62,
+"skillId": "o_skill_pierce_through_missile_ico"
+},
+{
+"name": "Suppression",
+"x": 176,
+"y": 197,
+"size": 62,
+"skillId": "o_skill_suppression_ico"
+},
+{
+"name": "Anticipation",
+"x": 252,
+"y": 197,
+"size": 62,
+"skillId": "o_pass_skill_anticipation"
+},
+{
+"name": "Long Shot",
+"x": 62,
+"y": 309,
+"size": 62,
+"skillId": "o_skill_long_range_shot_ico"
+},
+{
+"name": "Precision",
+"x": 138,
+"y": 309,
+"size": 62,
+"skillId": "o_pass_skill_precision"
+},
+{
+"name": "Hunter's Mark",
+"x": 214,
+"y": 309,
+"size": 62,
+"skillId": "o_skill_hunters_mark_ico"
+},
+{
+"name": "Shoot to Kill",
+"x": 62,
+"y": 421,
+"size": 62,
+"skillId": "o_pass_skill_control_shot"
+},
+{
+"name": "Headshot",
+"x": 138,
+"y": 421,
+"size": 62,
+"skillId": "o_skill_headshot_ico"
+},
+{
+"name": "Upper Hand",
+"x": 214,
+"y": 421,
+"size": 62,
+"skillId": "o_pass_skill_upper_hand"
+}
+]
+},
+{
+"name": "Shields",
+"group": "Weapons",
+"image": "shields.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Raise Shield",
+"x": 24,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_raise_shield_ico"
+},
+{
+"name": "Embodiment of Resilience",
+"x": 100,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_ultimate_resilience"
+},
+{
+"name": "Breakthrough",
+"x": 176,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_breakthrough_ico"
+},
+{
+"name": "Moment of Retribution",
+"x": 252,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_moment_of_retribution"
+},
+{
+"name": "Last Bastion",
+"x": 62,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_last_bastion"
+},
+{
+"name": "Shield Bash",
+"x": 176,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_ram_ico"
+},
+{
+"name": "Hold the Line!",
+"x": 62,
+"y": 377,
+"size": 62,
+"skillId": "o_skill_defensive_stance_ico"
+},
+{
+"name": "Retaliation",
+"x": 176,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_surprise_onrush"
+}
+]
+},
+{
+"name": "Staves",
+"group": "Weapons",
+"image": "staves.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Destabilizing Hits",
+"x": 24,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_destabilizing_hits"
+},
+{
+"name": "Hail of Blows",
+"x": 100,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_hail_of_blows_ico"
+},
+{
+"name": "Step Aside!",
+"x": 176,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_step_aside_ico"
+},
+{
+"name": "Battle Trance",
+"x": 252,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_battle_trance"
+},
+{
+"name": "Now or Never",
+"x": 24,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_now_or_never"
+},
+{
+"name": "Unwavering Stance",
+"x": 138,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_unwavering_stance_ico"
+},
+{
+"name": "Triumph",
+"x": 252,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_triumph"
+},
+{
+"name": "Peacemaker",
+"x": 138,
+"y": 377,
+"size": 62,
+"skillId": "o_skill_peacemaker_ico"
+}
+]
+},
+{
+"name": "Basic Skills",
+"group": "Utility",
+"image": "basicskills.png",
+"width": 338,
+"height": 518,
+"icons": [
+{
+"name": "Examine Surroundings",
+"x": 22,
+"y": 86,
+"size": 62,
+"skillId": "o_skill_trap_search_ico"
+},
+{
+"name": "Element of Surprise",
+"x": 100,
+"y": 86,
+"size": 62,
+"skillId": "o_pass_skill_Sudden_Attacks"
+}
+]
+},
+{
+"name": "Dual Wielding",
+"group": "Utility",
+"image": "dualwielding.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Flurry of Strikes",
+"x": 24,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_series_of_strikes_ico"
+},
+{
+"name": "Dual Wielding Training",
+"x": 100,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_dual_wielding_training"
+},
+{
+"name": "Deflect",
+"x": 176,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_deflect_ico"
+},
+{
+"name": "Dying Fervor",
+"x": 252,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_dying_fervor"
+},
+{
+"name": "Enough for Everyone",
+"x": 24,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_enough_for_everyone_ico"
+},
+{
+"name": "Concentration",
+"x": 100,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_honed_moves_ico"
+},
+{
+"name": "Berserk Tradition",
+"x": 214,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_berserk_traditions"
+},
+{
+"name": "Unstoppable",
+"x": 24,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_unstoppable"
+},
+{
+"name": "Whirlwind",
+"x": 118,
+"y": 377,
+"size": 62,
+"skillId": "o_skill_whirlwind_ico"
+},
+{
+"name": "More Blood!",
+"x": 194,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_more_blood"
+}
+]
+},
+{
+"name": "Survival",
+"group": "Utility",
+"image": "survival.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Butchering",
+"x": 24,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_butchering_ico"
+},
+{
+"name": "Make a Halt",
+"x": 138,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_halt"
+},
+{
+"name": "Cauterize Wounds",
+"x": 252,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_cauterize_wounds_ico"
+},
+{
+"name": "Pathfinder",
+"x": 100,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_trailblazer"
+},
+{
+"name": "Resourcefulness",
+"x": 24,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_resourcefulness"
+},
+{
+"name": "Austerity",
+"x": 176,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_asceticism"
+},
+{
+"name": "First Aid",
+"x": 252,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_first_aid_ico"
+},
+{
+"name": "Huntmaster",
+"x": 24,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_huntmaster"
+},
+{
+"name": "Ever Vigilant",
+"x": 100,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_lightning_reflexes"
+},
+{
+"name": "Adaptability",
+"x": 176,
+"y": 377,
+"size": 62,
+"skillId": "o_pass_skill_adaptability"
+},
+{
+"name": "Will to Survive",
+"x": 252,
+"y": 377,
+"size": 62,
+"skillId": "o_skill_will_to_survive_ico"
+}
+]
+},
+{
+"name": "Warfare",
+"group": "Utility",
+"image": "warfare.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Seize the Initiative",
+"x": 24,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_seize_the_initiative_ico"
+},
+{
+"name": "Opportune Moment",
+"x": 100,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_opportune_moment"
+},
+{
+"name": "Setup",
+"x": 176,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_preparation"
+},
+{
+"name": "War Cry",
+"x": 252,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_war_cry_ico"
+},
+{
+"name": "Right on Target",
+"x": 24,
+"y": 197,
+"size": 62,
+"skillId": "o_pass_skill_right_on_target"
+},
+{
+"name": "Offensive Tactic",
+"x": 100,
+"y": 197,
+"size": 62,
+"skillId": "o_skill_offensive_tactics_ico"
+},
+{
+"name": "Defensive Tactic",
+"x": 176,
+"y": 197,
+"size": 62,
+"skillId": "o_skill_defensive_tactics_ico"
+},
+{
+"name": "Intimidation",
+"x": 252,
+"y": 197,
+"size": 62,
+"skillId": "o_pass_skill_intimidation"
+},
+{
+"name": "Finisher",
+"x": 62,
+"y": 309,
+"size": 62,
+"skillId": "o_skill_finisher_ico"
+},
+{
+"name": "Tactical Advantage",
+"x": 138,
+"y": 309,
+"size": 62,
+"skillId": "o_pass_skill_stance_training"
+},
+{
+"name": "Against the Odds",
+"x": 214,
+"y": 309,
+"size": 62,
+"skillId": "o_skill_against_the_odds_ico"
+},
+{
+"name": "Armor Crusher",
+"x": 62,
+"y": 421,
+"size": 62,
+"skillId": "o_pass_skill_armor_breaker"
+},
+{
+"name": "Thirst for Battle",
+"x": 138,
+"y": 421,
+"size": 62,
+"skillId": "o_skill_thirst_for_battle_ico"
+},
+{
+"name": "Final Push",
+"x": 214,
+"y": 421,
+"size": 62,
+"skillId": "o_pass_skill_last_effort"
+}
+]
+},
+{
+"name": "Athletics",
+"group": "Utility",
+"image": "athletics.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Disengage",
+"x": 24,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_disengage"
+},
+{
+"name": "Leg Sweep",
+"x": 100,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_sweep_ico"
+},
+{
+"name": "Not This Time",
+"x": 176,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_never_again"
+},
+{
+"name": "Mighty Kick",
+"x": 252,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_power_kick_ico"
+},
+{
+"name": "Dash",
+"x": 24,
+"y": 197,
+"size": 62,
+"skillId": "o_skill_dash_ico"
+},
+{
+"name": "Inner Reserves",
+"x": 100,
+"y": 197,
+"size": 62,
+"skillId": "o_pass_skill_inner_reserves"
+},
+{
+"name": "Sudden Lunge",
+"x": 176,
+"y": 197,
+"size": 62,
+"skillId": "o_skill_sudden_strike_ico"
+},
+{
+"name": "Push the Falling",
+"x": 252,
+"y": 197,
+"size": 62,
+"skillId": "o_pass_skill_vivifying_violence"
+},
+{
+"name": "Elusiveness",
+"x": 100,
+"y": 309,
+"size": 62,
+"skillId": "o_skill_elusiveness_ico"
+},
+{
+"name": "No Time to Linger",
+"x": 176,
+"y": 309,
+"size": 62,
+"skillId": "o_pass_skill_no_time_to_linger"
+},
+{
+"name": "Sprint Training",
+"x": 62,
+"y": 421,
+"size": 62,
+"skillId": "o_pass_skill_sprint_training"
+},
+{
+"name": "Adrenaline Rush",
+"x": 138,
+"y": 421,
+"size": 62,
+"skillId": "o_skill_adrenaline_rush_ico"
+},
+{
+"name": "Peak Performance",
+"x": 214,
+"y": 421,
+"size": 62,
+"skillId": "o_pass_skill_peak_performance"
+}
+]
+},
+{
+"name": "Magic Mastery",
+"group": "Utility",
+"image": "magicmastery.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Seal of Finesse",
+"x": 24,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_seal_of_finesse_ico"
+},
+{
+"name": "Precise Movements",
+"x": 100,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_precise_movements"
+},
+{
+"name": "Dissipation",
+"x": 176,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_dispersion"
+},
+{
+"name": "Seal of Power",
+"x": 252,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_seal_of_power_ico"
+},
+{
+"name": "Seal of Insight",
+"x": 24,
+"y": 197,
+"size": 62,
+"skillId": "o_skill_seal_of_insight_ico"
+},
+{
+"name": "Lingering Incantations",
+"x": 100,
+"y": 197,
+"size": 62,
+"skillId": "o_pass_skill_lingering_incantations"
+},
+{
+"name": "Seal of Cleansing",
+"x": 176,
+"y": 197,
+"size": 62,
+"skillId": "o_skill_seal_of_cleansing_ico"
+},
+{
+"name": "Body and Spirit",
+"x": 252,
+"y": 197,
+"size": 62,
+"skillId": "o_pass_skill_spirit_and_body"
+},
+{
+"name": "Thaumaturgy",
+"x": 100,
+"y": 309,
+"size": 62,
+"skillId": "o_pass_skill_thaumaturgy"
+},
+{
+"name": "Seal of Reflection",
+"x": 176,
+"y": 309,
+"size": 62,
+"skillId": "o_skill_seal_of_reflection_ico"
+},
+{
+"name": "Seal of Shackles",
+"x": 100,
+"y": 421,
+"size": 62,
+"skillId": "o_skill_seal_of_shackles_ico"
+},
+{
+"name": "Forgotten Lore",
+"x": 176,
+"y": 421,
+"size": 62,
+"skillId": "o_pass_skill_magic_lore"
+}
+]
+},
+{
+"name": "Armored Combat",
+"group": "Utility",
+"image": "armoredcombat.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Self-Repair",
+"x": 38,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_self_repair"
+},
+{
+"name": "Brace for Impact!",
+"x": 138,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_brace_for_impact_ico"
+},
+{
+"name": "Hard Target",
+"x": 238,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_hard_target"
+},
+{
+"name": "Flexible Defense",
+"x": 38,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_active_defence_ico"
+},
+{
+"name": "Battle-Forged",
+"x": 138,
+"y": 231,
+"size": 62,
+"skillId": "o_pass_skill_battle_hardiness"
+},
+{
+"name": "Unyielding Defense",
+"x": 238,
+"y": 231,
+"size": 62,
+"skillId": "o_skill_unyielding_defence_ico"
+},
+{
+"name": "Battering Ram",
+"x": 88,
+"y": 376,
+"size": 62,
+"skillId": "o_skill_battering_ram_ico"
+},
+{
+"name": "Custom Adjustments",
+"x": 190,
+"y": 376,
+"size": 62,
+"skillId": "o_pass_skill_armor_adjustment"
+}
+]
+},
+{
+"name": "Pyromancy",
+"group": "Sorcery",
+"image": "pyromancy.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Fire Barrage",
+"x": 24,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_fire_barrage_ico"
+},
+{
+"name": "Flame Saturation",
+"x": 100,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_flame_saturation"
+},
+{
+"name": "Baptism by Fire",
+"x": 176,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_baptism_of_fire"
+},
+{
+"name": "Ring of Fire",
+"x": 252,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_flame_ring_ico"
+},
+{
+"name": "Feed the Flames",
+"x": 24,
+"y": 197,
+"size": 62,
+"skillId": "o_pass_skill_feed_the_flames"
+},
+{
+"name": "Flame Wave",
+"x": 100,
+"y": 197,
+"size": 62,
+"skillId": "o_skill_flame_wave_ico"
+},
+{
+"name": "Magma Rain",
+"x": 176,
+"y": 197,
+"size": 62,
+"skillId": "o_skill_magma_rain_ico"
+},
+{
+"name": "Scorch",
+"x": 252,
+"y": 197,
+"size": 62,
+"skillId": "o_pass_skill_scorch"
+},
+{
+"name": "Incineration",
+"x": 62,
+"y": 309,
+"size": 62,
+"skillId": "o_skill_incineration_ico"
+},
+{
+"name": "From Blaze to Furnace",
+"x": 138,
+"y": 309,
+"size": 62,
+"skillId": "o_pass_skill_safe_distance"
+},
+{
+"name": "Melting Ray",
+"x": 214,
+"y": 309,
+"size": 62,
+"skillId": "o_skill_melting_ray_ico"
+},
+{
+"name": "Excess Heat",
+"x": 62,
+"y": 421,
+"size": 62,
+"skillId": "o_pass_skill_excess_heat"
+},
+{
+"name": "Inferno",
+"x": 138,
+"y": 421,
+"size": 62,
+"skillId": "o_skill_inferno_ico"
+},
+{
+"name": "Pyromania",
+"x": 214,
+"y": 421,
+"size": 62,
+"skillId": "o_pass_skill_pyromania"
+}
+]
+},
+{
+"name": "Geomancy",
+"group": "Sorcery",
+"image": "geomancy.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Runic Boulder",
+"x": 100,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_runic_boulder_ico"
+},
+{
+"name": "Stone Armor",
+"x": 252,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_stone_armor_ico"
+},
+{
+"name": "Rune of Fortifying",
+"x": 24,
+"y": 197,
+"size": 62,
+"skillId": "o_pass_skill_rune_of_fortifying"
+},
+{
+"name": "Stone Spikes",
+"x": 100,
+"y": 197,
+"size": 62,
+"skillId": "o_skill_stone_spikes_ico"
+},
+{
+"name": "Rune of Enfeeblement",
+"x": 176,
+"y": 197,
+"size": 62,
+"skillId": "o_pass_skill_rune_of_weakening"
+},
+{
+"name": "Rune of Sustention",
+"x": 252,
+"y": 197,
+"size": 62,
+"skillId": "o_pass_skill_rune_of_support"
+},
+{
+"name": "Earthquake",
+"x": 24,
+"y": 309,
+"size": 62,
+"skillId": "o_skill_earth_quake_ico"
+},
+{
+"name": "Rune of Binding",
+"x": 100,
+"y": 309,
+"size": 62,
+"skillId": "o_pass_skill_rune_of_binding"
+},
+{
+"name": "Rune of Unity",
+"x": 176,
+"y": 309,
+"size": 62,
+"skillId": "o_pass_skill_rune_of_impact"
+},
+{
+"name": "Petrification",
+"x": 252,
+"y": 309,
+"size": 62,
+"skillId": "o_skill_petrification_ico"
+},
+{
+"name": "Rune of Cycle",
+"x": 24,
+"y": 421,
+"size": 62,
+"skillId": "o_pass_skill_rune_of_power"
+},
+{
+"name": "Runic Explosion",
+"x": 100,
+"y": 421,
+"size": 62,
+"skillId": "o_skill_runic_explosion_ico"
+},
+{
+"name": "Boulder Toss",
+"x": 176,
+"y": 421,
+"size": 62,
+"skillId": "o_skill_boulder_toss_ico"
+},
+{
+"name": "Rune of Absorption",
+"x": 252,
+"y": 421,
+"size": 62,
+"skillId": "o_pass_skill_rune_of_engulfment"
+}
+]
+},
+{
+"name": "Electromancy",
+"group": "Sorcery",
+"image": "electromancy.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Jolt",
+"x": 60,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_discharge_ico"
+},
+{
+"name": "Impulse",
+"x": 214,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_impulse_ico"
+},
+{
+"name": "Residual Charge",
+"x": 24,
+"y": 197,
+"size": 62,
+"skillId": "o_pass_skill_residual_charge"
+},
+{
+"name": "Short Circuit",
+"x": 100,
+"y": 197,
+"size": 62,
+"skillId": "o_skill_short_circuit_ico"
+},
+{
+"name": "Static Field",
+"x": 176,
+"y": 197,
+"size": 62,
+"skillId": "o_skill_static_field_ico"
+},
+{
+"name": "Potential Difference",
+"x": 252,
+"y": 197,
+"size": 62,
+"skillId": "o_pass_skill_potential_difference"
+},
+{
+"name": "Chain Lightning",
+"x": 24,
+"y": 309,
+"size": 62,
+"skillId": "o_skill_chain_lightning_ico"
+},
+{
+"name": "Unlimited Power",
+"x": 100,
+"y": 309,
+"size": 62,
+"skillId": "o_pass_skill_unlimited_power"
+},
+{
+"name": "Conductivity",
+"x": 176,
+"y": 309,
+"size": 62,
+"skillId": "o_pass_skill_conduit"
+},
+{
+"name": "Ball Lightning",
+"x": 252,
+"y": 309,
+"size": 62,
+"skillId": "o_skill_ball_lightning_ico"
+},
+{
+"name": "Chain Reaction",
+"x": 24,
+"y": 421,
+"size": 62,
+"skillId": "o_pass_skill_chain_reaction"
+},
+{
+"name": "Resonance Cascade",
+"x": 100,
+"y": 421,
+"size": 62,
+"skillId": "o_pass_skill_resonance_cascade"
+},
+{
+"name": "Tempest",
+"x": 176,
+"y": 421,
+"size": 62,
+"skillId": "o_skill_tempest_ico"
+},
+{
+"name": "Recharge",
+"x": 252,
+"y": 421,
+"size": 62,
+"skillId": "o_pass_skill_recharge"
+}
+]
+},
+{
+"name": "Arcanistics",
+"group": "Sorcery",
+"image": "arcanistics.png",
+"width": 338,
+"height": 522,
+"icons": [
+{
+"name": "Wormhole",
+"x": 24,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_wormhole_ico"
+},
+{
+"name": "Dimensional Shift",
+"x": 138,
+"y": 85,
+"size": 62,
+"skillId": "o_skill_planar_exchange_ico"
+},
+{
+"name": "Arcane Might",
+"x": 252,
+"y": 85,
+"size": 62,
+"skillId": "o_pass_skill_arcane_might"
+},
+{
+"name": "Time Echo",
+"x": 24,
+"y": 197,
+"size": 62,
+"skillId": "o_pass_skill_temporal_echo"
+},
+{
+"name": "Schism",
+"x": 100,
+"y": 197,
+"size": 62,
+"skillId": "o_skill_schism_ico"
+},
+{
+"name": "Transcendental Anchoring",
+"x": 176,
+"y": 197,
+"size": 62,
+"skillId": "o_pass_skill_spatial_anchors"
+},
+{
+"name": "Aether Shield",
+"x": 252,
+"y": 197,
+"size": 62,
+"skillId": "o_skill_aether_shield_ico"
+},
+{
+"name": "Astral Tides",
+"x": 62,
+"y": 309,
+"size": 62,
+"skillId": "o_pass_skill_astral_tides"
+},
+{
+"name": "Mana Crystal",
+"x": 138,
+"y": 309,
+"size": 62,
+"skillId": "o_skill_mana_crystal_ico"
+},
+{
+"name": "Stasis",
+"x": 214,
+"y": 309,
+"size": 62,
+"skillId": "o_skill_stasis_ico"
+},
+{
+"name": "Phantasm",
+"x": 24,
+"y": 421,
+"size": 62,
+"skillId": "o_skill_astral_phantasm_ico"
+},
+{
+"name": "Entropy Flare",
+"x": 100,
+"y": 421,
+"size": 62,
+"skillId": "o_pass_skill_extraplanar_geometry"
+},
+{
+"name": "Aether Harmony",
+"x": 176,
+"y": 421,
+"size": 62,
+"skillId": "o_pass_skill_aethereal_harmony"
+},
+{
+"name": "Beyond the Veil",
+"x": 252,
+"y": 421,
+"size": 62,
+"skillId": "o_pass_skill_beyond_the_veil"
+}
+]
+}
+]
+}
