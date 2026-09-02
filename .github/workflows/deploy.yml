@@ -31,8 +31,8 @@ jobs:
           cache-dependency-path: app/pnpm-lock.yaml
       - run: pnpm install --frozen-lockfile
         working-directory: app
-      #- run: pnpm vitest run
-      #  working-directory: app
+      - run: pnpm vitest run
+        working-directory: app
       # The site lives at https://<user>.github.io/<repo>/, so assets must be referenced under /<repo>/.
       - run: pnpm build --base=/${{ github.event.repository.name }}/
         working-directory: app
