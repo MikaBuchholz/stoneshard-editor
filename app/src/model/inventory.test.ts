@@ -3,11 +3,10 @@ import { describe, expect, it } from "vitest";
 import { decodeSave } from "../codec/save";
 import { setTotalGold, totalGold } from "./character";
 import { layoutBag, moveInBag, placeInBag, readInventory, removeFromBag, sortBag, swapInBag, writeInventory } from "./inventory";
-import { isEmptyRecord, newGoldRecord, newObjectRecord, type ItemRecord } from "./records";
+import { isEmptyRecord, newObjectRecord, type ItemRecord } from "./records";
 import type { CatalogItem } from "./catalog";
 
-const realSave = new Uint8Array(readFileSync(new URL("../../../test/character_1/save_2/data.sav", import.meta.url)));
-const freshSave = new Uint8Array(readFileSync(new URL("../../../test/character_1/save_1/data.sav", import.meta.url)));
+const freshSave = new Uint8Array(readFileSync(new URL("../../fixtures/character_1/save_1/data.sav", import.meta.url)));
 
 const bearFat: CatalogItem = {
   key: "bear_fat", kind: "object", objectName: "o_inv_bear_fat", name: "Bear Fat", category: "food",
@@ -23,13 +22,14 @@ const at = (placements: ReturnType<typeof layoutBag>["placements"], index: numbe
 };
 
 describe("inventory model", () => {
-  it("splits the real save into equipment and bag, and writes it back unchanged", async () => {
-    const { document } = await decodeSave(realSave);
-    const inventory = readInventory(document);
-    expect(inventory.equipment).toHaveLength(12);
-    expect(inventory.bag).toHaveLength(20);
-    expect(inventory.bag.filter(isEmptyRecord)).toHaveLength(18);
-    expect(writeInventory(document, inventory).inventoryDataList).toEqual(document.inventoryDataList);
+  it("keeps placeholder entries in place when an item is removed", async () => {
+    const { document } = await decodeSave(freshSave);
+    const original = readInventory(document);
+    const emptied = removeFromBag(original, 3);
+    expect(emptied.bag.filter(isEmptyRecord)).toHaveLength(1);
+    const written = writeInventory(document, emptied).inventoryDataList as ItemRecord[];
+    expect(written).toHaveLength((document.inventoryDataList as unknown[]).length);
+    expect(readInventory({ ...document, inventoryDataList: written }).bag.filter(isEmptyRecord)).toHaveLength(1);
   });
 
   it("keeps interleaved equipment and bag entries in their original order, and reads stored cells", async () => {
@@ -58,7 +58,7 @@ describe("inventory model", () => {
   });
 
   it("places, moves and swaps with collision and bounds checks", async () => {
-    const { document } = await decodeSave(realSave);
+    const { document } = await decodeSave(freshSave);
     let inventory = readInventory(document);
     inventory = placeInBag(inventory, newObjectRecord(bearFat, 2), footprint, { x: 8, y: 4 });
     const added = inventory.bag.findIndex((record) => record[0] === "o_inv_bear_fat" && record[6] === 2);
@@ -70,17 +70,21 @@ describe("inventory model", () => {
     expect(at(layoutBag(inventory.bag, footprint).placements, added)).toEqual([4, 2]);
     expect(() => moveInBag(inventory, added, 0, 0, footprint)).toThrow(/overlap/);
 
-    const charm = inventory.bag.findIndex((record) => record[0] === "o_inv_hilda_trinket");
-    expect(() => swapInBag(inventory, added, charm, footprint)).toThrow(/trade places/);
-    const original = inventory.bag.findIndex((record) => record[0] === "o_inv_bear_fat" && record[6] !== 2);
-    const before = layoutBag(inventory.bag, footprint);
-    inventory = swapInBag(inventory, added, original, footprint);
-    const after = layoutBag(inventory.bag, footprint);
-    expect(at(after.placements, added)).toEqual(at(before.placements, original));
-    expect(at(after.placements, original)).toEqual(at(before.placements, added));
-
     inventory = removeFromBag(inventory, added);
     expect(isEmptyRecord(inventory.bag[added])).toBe(true);
+  });
+
+  it("swaps two items only when each fits where the other sat", () => {
+    // A 4x3 item at the top-left and a 1x1 in the bottom-right corner: the big one cannot fit there.
+    const cornered = { equipment: [], bag: [item("big", 0), item("dot", 49)], sequence: [] };
+    expect(() => swapInBag(cornered, 0, 1, footprint)).toThrow(/trade places/);
+
+    // A 2x1 and a 1x2 with room around them trade places.
+    const roomy = { equipment: [], bag: [item("wide", 0), item("tall", 2)], sequence: [] };
+    const before = layoutBag(roomy.bag, footprint);
+    const after = layoutBag(swapInBag(roomy, 0, 1, footprint).bag, footprint);
+    expect(at(after.placements, 0)).toEqual(at(before.placements, 1));
+    expect(at(after.placements, 1)).toEqual(at(before.placements, 0));
   });
 
   it("sorts and re-packs the bag, and removes several items at once", () => {
@@ -96,19 +100,22 @@ describe("inventory model", () => {
   });
 
   it("reads and sets gold through a purse when present, else loose", async () => {
-    const { document } = await decodeSave(realSave);
-    expect(totalGold(document)).toBe(0);
-    const withLoose = setTotalGold(document, 150);
-    expect(totalGold(withLoose)).toBe(150);
-    expect(readInventory(withLoose).bag.filter((record) => record[0] === "o_inv_gold")).toHaveLength(1);
-
-    let inventory = readInventory(document);
-    inventory = placeInBag(inventory, ["o_inv_moneybag", { idName: "moneybag", lootList: [newGoldRecord(10)] }, 0, 0, 0, 1, 0, 0, 0, "N/A"], footprint);
-    const withPurse = writeInventory(document, inventory);
-    expect(totalGold(withPurse)).toBe(10);
-    const updated = setTotalGold(withPurse, 999);
+    const { document } = await decodeSave(freshSave);
+    // The starting character carries her coins inside a purse.
+    expect(totalGold(document)).toBe(250);
+    const updated = setTotalGold(document, 999);
     expect(totalGold(updated)).toBe(999);
     const purse = readInventory(updated).bag.find((record) => record[0] === "o_inv_moneybag")!;
-    expect((purse[1].lootList as unknown[]).length).toBe(1);
+    expect((purse[1].lootList as ItemRecord[]).filter((entry) => entry[0] === "o_inv_gold")).toHaveLength(1);
+    expect(readInventory(updated).bag.filter((record) => record[0] === "o_inv_gold")).toHaveLength(0);
+
+    // With no purse the coins go loose into the bag instead.
+    const inventory = readInventory(document);
+    const purseIndex = inventory.bag.findIndex((record) => record[0] === "o_inv_moneybag");
+    const withoutPurse = writeInventory(document, removeFromBag(inventory, purseIndex));
+    expect(totalGold(withoutPurse)).toBe(0);
+    const loose = setTotalGold(withoutPurse, 150);
+    expect(totalGold(loose)).toBe(150);
+    expect(readInventory(loose).bag.filter((record) => record[0] === "o_inv_gold")).toHaveLength(1);
   });
 });

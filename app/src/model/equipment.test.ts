@@ -10,7 +10,7 @@ const rawCatalog = JSON.parse(readFileSync(new URL("../../public/catalog/items.j
 const templates = JSON.parse(readFileSync(new URL("../../public/catalog/templates.json", import.meta.url), "utf8")) as Catalog["templates"];
 const catalog: Catalog = { ...rawCatalog, templates, byKey: new Map(rawCatalog.items.map((item) => [item.key, item])) };
 const footprintOf = (record: ItemRecord) => catalogItemFor(record, catalog) ?? { w: 1, h: 1 };
-const fresh = new Uint8Array(readFileSync(new URL("../../../test/character_1/save_1/data.sav", import.meta.url)));
+const fresh = new Uint8Array(readFileSync(new URL("../../fixtures/character_1/save_1/data.sav", import.meta.url)));
 
 describe("equipment", () => {
   it("knows which slots an item can go in", () => {

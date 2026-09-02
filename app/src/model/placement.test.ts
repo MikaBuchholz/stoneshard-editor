@@ -16,7 +16,7 @@ function cells(inventory: Inventory) {
 
 describe("bag positions", () => {
   it("adding equipment never produces duplicate stored cells", async () => {
-    const bytes = new Uint8Array(readFileSync(new URL("../../../test/character_1/save_1/data.sav", import.meta.url)));
+    const bytes = new Uint8Array(readFileSync(new URL("../../fixtures/character_1/save_1/data.sav", import.meta.url)));
     let inventory = readInventory((await decodeSave(bytes)).document);
     const toRemove = inventory.bag.map((r, i) => (r[0] !== "o_inv_map_osbrook" ? i : -1)).filter((i) => i >= 0);
     inventory = removeFromBag(inventory, ...toRemove);

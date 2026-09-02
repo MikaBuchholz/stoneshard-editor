@@ -1,14 +1,14 @@
-# Game files and personal saves never go in the repo
+# Game files and personal saves never go in the repo.
+# Anchored to the repo root so app/fixtures/character_1/ stays tracked.
 *.rar
 *.win
-test/
-win/
+/test/
+/win/
+/character_*/
+/*.sav
 
 # Tooling
 node_modules/
 dist/
 __pycache__/
 .DS_Store
-
-# Extracted personal character folders
-character_*/
