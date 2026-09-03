@@ -246,8 +246,12 @@ body.dragging, body.dragging * { cursor: grabbing !important; }
 .vitals-current dt, .vitals-current dd { border-top: 1px solid var(--border); padding-top: 0.2rem; margin-top: 0.2rem; color: var(--text); }
 
 /* Selection actions, pinned so they never scroll out of reach */
-.selection-bar {
+.bottom-stack {
   position: fixed; left: 50%; bottom: 1rem; transform: translateX(-50%); z-index: 15;
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem; pointer-events: none;
+}
+.bottom-stack > * { pointer-events: auto; }
+.selection-bar {
   display: flex; align-items: center; gap: 0.75rem; max-width: min(90vw, 800px);
   padding: 0.5rem 0.85rem; background: var(--panel); border: 1px solid var(--accent);
   border-radius: 10px; box-shadow: 0 8px 28px rgba(0, 0, 0, 0.55);
@@ -260,6 +264,11 @@ body.dragging, body.dragging * { cursor: grabbing !important; }
 .selection-label { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .selection-bar .actions { margin: 0 0 0 auto; flex-wrap: nowrap; }
 .selection-hint { font-size: 0.75rem; white-space: nowrap; }
+.undo-bar {
+  display: flex; align-items: center; gap: 0.75rem; max-width: min(90vw, 800px);
+  padding: 0.45rem 0.5rem 0.45rem 0.85rem; background: var(--panel-2); border: 1px solid var(--border);
+  border-radius: 10px; box-shadow: 0 8px 28px rgba(0, 0, 0, 0.55); font-size: 0.9rem;
+}
 @media (max-width: 700px) { .selection-hint { display: none; } }
 
 /* Ownership notice */

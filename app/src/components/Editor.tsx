@@ -30,6 +30,7 @@ import { ItemPicker } from "./ItemPicker";
 import { ItemSprite } from "./ItemSprite";
 import { ItemTooltip, type TooltipState } from "./ItemTooltip";
 import { SelectionBar } from "./SelectionBar";
+import { UndoBar } from "./UndoBar";
 import type { Comparison } from "./ItemDetails";
 import { compareStats } from "../model/stats";
 import { EQUIPMENT_SLOTS } from "../model/inventory";
@@ -64,6 +65,7 @@ export function Editor({ catalog, skills, characterFolder, save, original, warni
   const [multi, setMulti] = useState<ReadonlySet<number>>(new Set());
   const [showHidden, setShowHidden] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
+  const [undo, setUndo] = useState<{ document: SaveDocument; label: string } | null>(null);
   const [tooltip, setTooltip] = useState<TooltipState | null>(null);
   const inventory = readInventory(document);
   const dirty = document !== original.document;
@@ -76,9 +78,19 @@ export function Editor({ catalog, skills, characterFolder, save, original, warni
   const layout = layoutBag(inventory.bag, footprintOf);
 
   /** Every edit goes through here; bag positions are re-pinned so no two items can share a cell on disk. */
-  function apply(next: SaveDocument) {
+  function apply(next: SaveDocument, undoPoint?: { document: SaveDocument; label: string }) {
     setDocument(writeInventory(next, normalizeBag(readInventory(next), footprintOf)));
     setMessage(null);
+    // Any edit other than a removal retires the offer, so undoing can never discard newer work.
+    setUndo(undoPoint ?? null);
+  }
+
+  function undoRemoval() {
+    if (!undo) return;
+    setDocument(undo.document);
+    setUndo(null);
+    setMessage(null);
+    select(null);
   }
 
   /** Plain click selects one item; shift-click toggles bag items in and out of a multi-selection. */
@@ -102,6 +114,10 @@ export function Editor({ catalog, skills, characterFolder, save, original, warni
       const target = event.target as HTMLElement | null;
       const typing = target && /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName);
       if (event.key === "Escape") select(null);
+      if (!typing && (event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "z" && undo) {
+        event.preventDefault();
+        undoRemoval();
+      }
       if (!typing && (event.key === "Delete" || event.key === "Backspace") && selectedRecords.length > 0) {
         event.preventDefault();
         removeSelection();
@@ -113,7 +129,7 @@ export function Editor({ catalog, skills, characterFolder, save, original, warni
 
   function removeMulti() {
     const indexes = Array.from(multi);
-    if (tryInventory(() => removeFromBag(inventory, ...indexes))) select(null);
+    if (tryInventory(() => removeFromBag(inventory, ...indexes), `Removed ${indexes.length} items`)) select(null);
   }
 
   function sortInventory() {
@@ -134,9 +150,9 @@ export function Editor({ catalog, skills, characterFolder, save, original, warni
     }
   }
 
-  function tryInventory(action: () => ReturnType<typeof readInventory>): boolean {
+  function tryInventory(action: () => ReturnType<typeof readInventory>, undoLabel?: string): boolean {
     try {
-      apply(writeInventory(document, action()));
+      apply(writeInventory(document, action()), undoLabel ? { document, label: undoLabel } : undefined);
       return true;
     } catch (error) {
       setMessage(error instanceof Error ? error.message : String(error));
@@ -346,8 +362,9 @@ export function Editor({ catalog, skills, characterFolder, save, original, warni
   }
 
   function removeSelected() {
-    if (!selection) return;
-    tryInventory(() => (selection.kind === "bag" ? removeFromBag(inventory, selection.index) : removeEquipment(inventory, selection.position)));
+    if (!selection || !selected) return;
+    const label = `Removed ${displayName(selected, catalog)}`;
+    tryInventory(() => (selection.kind === "bag" ? removeFromBag(inventory, selection.index) : removeEquipment(inventory, selection.position)), label);
     select(null);
   }
 
@@ -393,6 +410,7 @@ export function Editor({ catalog, skills, characterFolder, save, original, warni
         onReset={() => {
           setDocument(original.document);
           setMessage(null);
+          setUndo(null);
           select(null);
         }}
         onBack={onBack}
@@ -437,14 +455,17 @@ export function Editor({ catalog, skills, characterFolder, save, original, warni
       </div>
       <SkillsPanel document={document} skills={skills} onChange={apply} />
       <DangerZone document={document} showHidden={showHidden} onShowHidden={setShowHidden} onChange={apply} />
-      <SelectionBar
-        catalog={catalog}
-        records={selectedRecords}
-        canDuplicate={multi.size === 0 && selected !== null}
-        onDuplicate={duplicateSelected}
-        onRemove={removeSelection}
-        onClear={() => select(null)}
-      />
+      <div className="bottom-stack">
+        {undo && <UndoBar label={undo.label} onUndo={undoRemoval} onDismiss={() => setUndo(null)} />}
+        <SelectionBar
+          catalog={catalog}
+          records={selectedRecords}
+          canDuplicate={multi.size === 0 && selected !== null}
+          onDuplicate={duplicateSelected}
+          onRemove={removeSelection}
+          onClear={() => select(null)}
+        />
+      </div>
       {tooltip && !drag && <ItemTooltip state={tooltip} catalog={catalog} comparisons={comparisonsFor(tooltip.record)} />}
       {drag && (
         <div className="drag-ghost" style={ghostStyle(drag)}>
