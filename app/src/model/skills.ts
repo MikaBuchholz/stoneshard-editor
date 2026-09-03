@@ -8,12 +8,36 @@ import type { SaveDocument } from "../codec/save";
 
 const STRIDE = 5;
 
+/** One coloured run of a skill description, as the game and the wiki style it. */
+export interface DescriptionRun {
+  text: string;
+  tone?: "strong" | "good" | "bad" | "fire" | "shock" | "arcane" | "energy" | "unholy" | "caustic" | "frost" | "sacred";
+}
+
+/** Tooltip data for a skill, taken from the wiki's per-tree skill data pages. */
+export interface SkillInfo {
+  type?: string;
+  target?: string;
+  range?: string;
+  energy?: string;
+  cooldown?: string;
+  armorPen?: string;
+  backfireChance?: string;
+  modifiers?: string;
+  /** Single-paragraph fields that carry their own colour markup. */
+  requirements?: DescriptionRun[];
+  unlock?: DescriptionRun[];
+  /** Paragraphs, each a list of runs. */
+  description?: DescriptionRun[][];
+}
+
 export interface SkillCatalogEntry {
   id: string;
   key: string;
   kind: "active" | "passive";
   name: string;
   icon?: string;
+  info?: SkillInfo;
 }
 
 export interface TreeIcon {
@@ -75,6 +99,20 @@ export function setSkillLearned(document: SaveDocument, id: string, learned: boo
     return { ...document, skillsDataMap: { ...map, skillsAllDataList: list } };
   }
   throw new Error("That skill is not in this save.");
+}
+
+/** Unlearn every skill at once, keeping each stored flag's value type. */
+export function unlearnAllSkills(document: SaveDocument): { document: SaveDocument; count: number } {
+  const list = [...skillList(document)];
+  let count = 0;
+  for (let index = 0; index + STRIDE <= list.length; index += STRIDE) {
+    if (typeof list[index] !== "string" || !truthy(list[index + 1])) continue;
+    const current = list[index + 1];
+    list[index + 1] = typeof current === "boolean" ? false : 0;
+    count += 1;
+  }
+  const map = document.skillsDataMap as Record<string, unknown>;
+  return { document: { ...document, skillsDataMap: { ...map, skillsAllDataList: list } }, count };
 }
 
 function truthy(value: unknown): boolean {

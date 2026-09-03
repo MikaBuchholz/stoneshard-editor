@@ -20,8 +20,6 @@ export const CHARACTER_FIELDS: CharacterField[] = [
   { key: "XP", label: "Experience" },
   { key: "AP", label: "Stat points", hint: "Unspent attribute points" },
   { key: "SP", label: "Ability points", hint: "Unspent ability points" },
-  { key: "HP", label: "Health" },
-  { key: "MP", label: "Energy" },
 ];
 
 export const IDENTITY_FIELDS = ["nameKey", "classKey", "raceKey", "sexKey"] as const;

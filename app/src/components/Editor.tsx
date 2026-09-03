@@ -29,6 +29,7 @@ import { ItemDetails } from "./ItemDetails";
 import { ItemPicker } from "./ItemPicker";
 import { ItemSprite } from "./ItemSprite";
 import { ItemTooltip, type TooltipState } from "./ItemTooltip";
+import { SelectionBar } from "./SelectionBar";
 import type { Comparison } from "./ItemDetails";
 import { compareStats } from "../model/stats";
 import { EQUIPMENT_SLOTS } from "../model/inventory";
@@ -98,7 +99,13 @@ export function Editor({ catalog, skills, characterFolder, save, original, warni
 
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
+      const target = event.target as HTMLElement | null;
+      const typing = target && /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName);
       if (event.key === "Escape") select(null);
+      if (!typing && (event.key === "Delete" || event.key === "Backspace") && selectedRecords.length > 0) {
+        event.preventDefault();
+        removeSelection();
+      }
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -310,6 +317,22 @@ export function Editor({ catalog, skills, characterFolder, save, original, warni
 
   const comparisons: Comparison[] = selected && selection?.kind === "bag" ? comparisonsFor(selected) : [];
 
+  /** Everything the selection actions apply to: the shift-click set, or the single selected item. */
+  const selectedRecords: ItemRecord[] =
+    multi.size > 0
+      ? Array.from(multi).map((index) => inventory.bag[index])
+      : selected
+        ? [selected]
+        : [];
+
+  function removeSelection() {
+    if (multi.size > 0) {
+      removeMulti();
+      return;
+    }
+    removeSelected();
+  }
+
   function updateSelected(update: (record: ItemRecord) => void) {
     if (!selection) return;
     tryInventory(() =>
@@ -378,26 +401,8 @@ export function Editor({ catalog, skills, characterFolder, save, original, warni
       {message && <p className="notice">{message}</p>}
       <div className="columns">
         <div className="column">
-          <CharacterPanel document={document} onChange={apply} onError={setMessage} />
-          {multi.size > 1 && (
-            <section className="panel details">
-              <h2>{multi.size} items selected</h2>
-              <ul className="selected-list">
-                {Array.from(multi).map((index) => (
-                  <li key={index}>{catalogItemFor(inventory.bag[index], catalog)?.name ?? inventory.bag[index][0]}</li>
-                ))}
-              </ul>
-              <div className="actions">
-                <button type="button" className="danger" onClick={removeMulti}>
-                  Remove {multi.size} items
-                </button>
-                <button type="button" className="link" onClick={() => select(null)}>
-                  Clear selection
-                </button>
-              </div>
-            </section>
-          )}
-          {multi.size <= 1 && selected && (
+          <CharacterPanel document={document} catalog={catalog} onChange={apply} onError={setMessage} />
+          {multi.size === 0 && selected && (
             <ItemDetails
               record={selected}
               catalog={catalog}
@@ -432,6 +437,14 @@ export function Editor({ catalog, skills, characterFolder, save, original, warni
       </div>
       <SkillsPanel document={document} skills={skills} onChange={apply} />
       <DangerZone document={document} showHidden={showHidden} onShowHidden={setShowHidden} onChange={apply} />
+      <SelectionBar
+        catalog={catalog}
+        records={selectedRecords}
+        canDuplicate={multi.size === 0 && selected !== null}
+        onDuplicate={duplicateSelected}
+        onRemove={removeSelection}
+        onClear={() => select(null)}
+      />
       {tooltip && !drag && <ItemTooltip state={tooltip} catalog={catalog} comparisons={comparisonsFor(tooltip.record)} />}
       {drag && (
         <div className="drag-ghost" style={ghostStyle(drag)}>

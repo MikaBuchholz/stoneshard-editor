@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { decodeSave, type SaveDocument } from "../codec/save";
-import { readLearnedSkills, setSkillLearned } from "./skills";
+import { readLearnedSkills, setSkillLearned, unlearnAllSkills } from "./skills";
 
 const freshSave = new Uint8Array(readFileSync(new URL("../../fixtures/character_1/save_1/data.sav", import.meta.url)));
 
@@ -40,5 +40,20 @@ describe("skills", () => {
     const offList = (off.skillsDataMap as { skillsAllDataList: unknown[] }).skillsAllDataList;
     expect(offList[offList.indexOf("o_skill_piercing_lunge_ico") + 1]).toBe(0);
     expect(() => setSkillLearned(off, "o_skill_not_a_skill", true)).toThrow(/not in this save/);
+  });
+
+  it("unlearns everything at once and reports how many were refunded", async () => {
+    const { document } = await decodeSave(freshSave);
+    const { document: cleared, count } = unlearnAllSkills(document);
+    expect(count).toBe(5);
+    expect(Array.from(readLearnedSkills(cleared).values()).filter(Boolean)).toHaveLength(0);
+    expect(Array.from(readLearnedSkills(document).values()).filter(Boolean)).toHaveLength(5);
+    expect(unlearnAllSkills(cleared).count).toBe(0);
+
+    const numeric = withNumericFlags(document);
+    const clearedNumeric = unlearnAllSkills(numeric);
+    expect(clearedNumeric.count).toBe(5);
+    const list = (clearedNumeric.document.skillsDataMap as { skillsAllDataList: unknown[] }).skillsAllDataList;
+    expect(list.filter((value, index) => index % 5 === 1 && value !== 0)).toHaveLength(0);
   });
 });
