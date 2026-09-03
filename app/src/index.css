@@ -267,3 +267,7 @@ body.dragging, body.dragging * { cursor: grabbing !important; }
   max-width: 46rem; margin: 2rem auto 4.5rem; padding: 0 1rem;
   color: var(--muted); font-size: 0.75rem; line-height: 1.5; text-align: center;
 }
+.legal p { margin: 0 0 0.5rem; }
+.legal a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+.legal a:hover { color: var(--accent); }
+.legal-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem 1rem; }

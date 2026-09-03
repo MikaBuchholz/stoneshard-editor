@@ -104,6 +104,12 @@ displays or ships — item and skill icons, skill tree panels, item and skill na
 to them. This is an unofficial fan-made tool, not affiliated with or endorsed by either company, and it
 claims no ownership of their work. Only the editor's own source code is the author's.
 
+- [Stoneshard on Steam](https://store.steampowered.com/app/625960/Stoneshard/)
+- [Official Stoneshard wiki](https://stoneshard.com/wiki/Stoneshard_Wiki) — source of the skill descriptions and tree panels
+
+Written with [Claude](https://claude.com/claude-code), Anthropic's AI assistant, which did most of the
+coding, the reverse-engineering of the save format and the asset extraction.
+
 The generated catalogs and sprites under `app/public/` are extracted from a copy of the game you supply, and
 the skill text and tree panels come from the official wiki. Nothing here replaces or redistributes the game
 itself; you need to own Stoneshard for any of it to be useful.
