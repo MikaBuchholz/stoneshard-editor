@@ -96,3 +96,14 @@ Skills that grant or restore these are called out but not totalled, because most
 conditional.
 Equipping follows the item tables (armor slot, weapon hands, two-handed weapons need a free off-hand,
 ammo pouches and quivers go in the off-hand, backpacks on the back) but does not check attribute requirements.
+
+## Legal
+
+Stoneshard is made by Ink Stains Games and published by HypeTrain Digital. Every game asset this project
+displays or ships — item and skill icons, skill tree panels, item and skill names and descriptions — belongs
+to them. This is an unofficial fan-made tool, not affiliated with or endorsed by either company, and it
+claims no ownership of their work. Only the editor's own source code is the author's.
+
+The generated catalogs and sprites under `app/public/` are extracted from a copy of the game you supply, and
+the skill text and tree panels come from the official wiki. Nothing here replaces or redistributes the game
+itself; you need to own Stoneshard for any of it to be useful.

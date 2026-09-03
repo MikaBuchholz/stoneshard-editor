@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { decodeSave, saltFor, verifyChecksum, type DecodedSave } from "./codec/save";
 import { Editor } from "./components/Editor";
 import { FolderPicker } from "./components/FolderPicker";
+import { LegalNotice } from "./components/LegalNotice";
 import { SaveList } from "./components/SaveList";
 import type { CharacterFolder, SaveEntry } from "./files/folder";
 import { loadCatalog, type Catalog } from "./model/catalog";
@@ -80,6 +81,7 @@ export default function App() {
           onBack={() => setStage({ kind: "saves", characters: stage.characters })}
         />
       )}
+      <LegalNotice />
     </main>
   );
 }

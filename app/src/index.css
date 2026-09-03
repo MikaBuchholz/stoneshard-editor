@@ -261,3 +261,9 @@ body.dragging, body.dragging * { cursor: grabbing !important; }
 .selection-bar .actions { margin: 0 0 0 auto; flex-wrap: nowrap; }
 .selection-hint { font-size: 0.75rem; white-space: nowrap; }
 @media (max-width: 700px) { .selection-hint { display: none; } }
+
+/* Ownership notice */
+.legal {
+  max-width: 46rem; margin: 2rem auto 4.5rem; padding: 0 1rem;
+  color: var(--muted); font-size: 0.75rem; line-height: 1.5; text-align: center;
+}
