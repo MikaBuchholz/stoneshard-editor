@@ -26,8 +26,12 @@ const LOWER_IS_BETTER = new Set(["FMB", "Abilities_Energy_Cost", "Skills_Energy_
 /** Flat values; everything else the game shows as a percentage. */
 const FLAT = new Set(["DEF", "DMG", "Block_Power", "Range", "Bonus_Range", "MP", "Bodypart_Damage"]);
 
-/** Record properties that are not stats even though they are numbers. */
-const NOT_STATS = new Set(["Colour", "Duration", "MaxDuration", "is_cursed", "identified", "charge", "max_charge", "quality", "cursedQuality", "i_index", "Effects_Duration", "Stack", "Fresh", "is_trade_item", "HasOwner", "is_execute", "Timestamp", "is_fire", "Weight"]);
+/**
+ * Record properties that are not stats even though they are numbers. `DMG` and `Rng` are excluded
+ * because they repeat a value already shown: DMG mirrors the weapon's damage column, and Rng mirrors
+ * Range. Listing both made every weapon show the same number twice.
+ */
+const NOT_STATS = new Set(["Colour", "Duration", "MaxDuration", "is_cursed", "identified", "charge", "max_charge", "quality", "cursedQuality", "i_index", "Effects_Duration", "Stack", "Fresh", "is_trade_item", "HasOwner", "is_execute", "Timestamp", "is_fire", "Weight", "DMG", "Rng"]);
 
 export function isStat(key: string, value: unknown): value is number {
   return typeof value === "number" && !NOT_STATS.has(key) && !/^(Char\d|key)$/.test(key);
@@ -67,7 +71,8 @@ export function compareStats(candidate: ItemRecord, current: ItemRecord | null):
   const after = statsOf(candidate);
   const before = current ? statsOf(current) : {};
   const keys = Array.from(new Set([...Object.keys(before), ...Object.keys(after)]));
-  const damageFirst = (key: string) => (key === "DMG" ? 0 : key === "DEF" ? 1 : 2);
+  // Damage and defence lead, since they are what the item is mainly judged on.
+  const damageFirst = (key: string) => (key.endsWith("_Damage") ? 0 : key === "DEF" ? 1 : 2);
   keys.sort((a, b) => damageFirst(a) - damageFirst(b) || statLabel(a).localeCompare(statLabel(b)));
   return keys.map((key) => {
     const from = before[key] ?? 0;

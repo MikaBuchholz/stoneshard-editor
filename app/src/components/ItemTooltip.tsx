@@ -31,8 +31,10 @@ export function ItemTooltip({ state, catalog, comparisons }: { state: TooltipSta
   if (props.is_cursed === 1) rows.push(["Cursed", "yes"]);
   if (props.identified === 0) rows.push(["Identified", "no"]);
   if (comparisons.length === 0) {
+    // The headline Damage row below already reports the weapon's damage column; skip it here.
+    const headline = typeof props.DamageType === "string" ? props.DamageType : null;
     for (const [key, value] of Object.entries(statsOf(record))) {
-      if (value !== 0 && key !== "DMG") rows.push([statLabel(key), formatStat(key, value)]);
+      if (value !== 0 && key !== headline) rows.push([statLabel(key), formatStat(key, value)]);
     }
     if (typeof props.DMG === "number" && props.DMG > 0) rows.unshift(["Damage", `${props.DMG}${typeof props.DamageType === "string" ? ` ${props.DamageType.replace("_Damage", "").toLowerCase()}` : ""}`]);
   }

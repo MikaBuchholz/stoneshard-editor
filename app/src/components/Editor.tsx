@@ -56,13 +56,16 @@ export function Editor({ catalog, skills, characterFolder, save, original, warni
   const saveFolder = save.folder;
   const [document, setDocument] = useState<SaveDocument>(original.document);
   const [seenOriginal, setSeenOriginal] = useState(original);
-  // A reload from disk (or our own save coming back) replaces the baseline without remounting the editor.
+  const [selection, setSelection] = useState<Selection | null>(null);
+  const [multi, setMulti] = useState<ReadonlySet<number>>(new Set());
+  // A reload from disk (or our own save coming back) replaces the baseline without remounting the
+  // editor. The selection has to go with it: its indexes point into the inventory being replaced.
   if (original !== seenOriginal) {
     setSeenOriginal(original);
     setDocument(original.document);
+    setSelection(null);
+    setMulti(new Set());
   }
-  const [selection, setSelection] = useState<Selection | null>(null);
-  const [multi, setMulti] = useState<ReadonlySet<number>>(new Set());
   const [showHidden, setShowHidden] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [undo, setUndo] = useState<{ document: SaveDocument; label: string } | null>(null);
@@ -77,9 +80,24 @@ export function Editor({ catalog, skills, characterFolder, save, original, warni
   );
   const layout = layoutBag(inventory.bag, footprintOf);
 
-  /** Every edit goes through here; bag positions are re-pinned so no two items can share a cell on disk. */
+  // A selection outlives the inventory it points into: reloading from disk, or applying raw JSON,
+  // can leave these indexes past the end. Resolve them once, defensively, and read this everywhere.
+  const selectedInBag = selection?.kind === "bag" ? inventory.bag[selection.index] : undefined;
+  const selected: ItemRecord | null =
+    selectedInBag && !isEmptyRecord(selectedInBag)
+      ? selectedInBag
+      : selection?.kind === "equipment"
+        ? inventory.equipment[selection.position] ?? null
+        : null;
+
+  /**
+   * Every edit goes through here. Bag positions are re-pinned so no two items can share a cell on
+   * disk, but only when the inventory actually changed: editing gold or a stat should not rewrite
+   * the positions of items the user never touched.
+   */
   function apply(next: SaveDocument, undoPoint?: { document: SaveDocument; label: string }) {
-    setDocument(writeInventory(next, normalizeBag(readInventory(next), footprintOf)));
+    const inventoryChanged = next.inventoryDataList !== document.inventoryDataList;
+    setDocument(inventoryChanged ? writeInventory(next, normalizeBag(readInventory(next), footprintOf)) : next);
     setMessage(null);
     // Any edit other than a removal retires the offer, so undoing can never discard newer work.
     setUndo(undoPoint ?? null);
@@ -245,8 +263,8 @@ export function Editor({ catalog, skills, characterFolder, save, original, warni
   const overSlot = drag && hover?.slot ? { slot: hover.slot, valid: slotAccepts(drag.payload, hover.slot) } : null;
   const fitSlots = drag
     ? slotsFor(draggedItem(drag.payload))
-    : selection?.kind === "bag" && !isEmptyRecord(inventory.bag[selection.index])
-      ? slotsFor(catalogItemFor(inventory.bag[selection.index], catalog))
+    : selected
+      ? slotsFor(catalogItemFor(selected, catalog))
       : [];
   const preview =
     drag && hover?.cell && !hover.slot
@@ -307,13 +325,6 @@ export function Editor({ catalog, skills, characterFolder, save, original, warni
     return { left, top, width, height };
   }
 
-  const selected: ItemRecord | null =
-    selection?.kind === "bag" && !isEmptyRecord(inventory.bag[selection.index])
-      ? inventory.bag[selection.index]
-      : selection?.kind === "equipment" && inventory.equipment[selection.position]
-        ? inventory.equipment[selection.position]
-        : null;
-
   /** How a loose item compares with whatever sits in each slot it could go in. */
   function comparisonsFor(record: ItemRecord): Comparison[] {
     if (record[9] !== "N/A") return [];
@@ -336,7 +347,9 @@ export function Editor({ catalog, skills, characterFolder, save, original, warni
   /** Everything the selection actions apply to: the shift-click set, or the single selected item. */
   const selectedRecords: ItemRecord[] =
     multi.size > 0
-      ? Array.from(multi).map((index) => inventory.bag[index])
+      ? Array.from(multi)
+          .map((index) => inventory.bag[index])
+          .filter((record): record is ItemRecord => Boolean(record) && !isEmptyRecord(record))
       : selected
         ? [selected]
         : [];

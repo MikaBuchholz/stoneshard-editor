@@ -1,6 +1,6 @@
 import type { SaveDocument } from "../codec/save";
 import { isGold, isItemRecord, newGoldRecord, type ItemRecord } from "./records";
-import { readInventory, writeInventory, type Inventory } from "./inventory";
+import { placeInBag, readInventory, writeInventory, type FootprintOf, type Inventory } from "./inventory";
 import { cloneRecord, emptyRecord, markAdded } from "./records";
 
 export interface CharacterField {
@@ -44,6 +44,10 @@ export function saveVersion(document: SaveDocument): string | undefined {
 /** Purses and belt pouches: the containers coins normally live in. */
 const PURSE_HEADS = new Set(["o_inv_moneybag", "o_inv_bag_belt"]);
 
+/** The game's own limits: a purse holds 2000 crowns, a loose pile on the grid holds 100. */
+export const PURSE_CAPACITY = 2000;
+export const COIN_PILE_CAPACITY = 100;
+
 function contents(record: ItemRecord): ItemRecord[] {
   const list = record[1].lootList;
   return Array.isArray(list) ? list.filter(isItemRecord) : [];
@@ -63,10 +67,11 @@ export function totalGold(document: SaveDocument): number {
 }
 
 /**
- * Put `amount` coins in the first purse if there is one, otherwise in a loose stack in the bag.
- * Every other coin stack in the bag or purses is removed so the total is exactly `amount`.
+ * Spread `amount` coins the way the game stores them: purses first at 2000 each, then loose 1x1 piles
+ * of up to 100 in free bag cells. Existing coins are cleared first, so the total ends up exactly
+ * `amount` — or as much of it as the purses and the remaining grid space can hold.
  */
-export function setTotalGold(document: SaveDocument, amount: number): SaveDocument {
+export function setTotalGold(document: SaveDocument, amount: number, footprintOf: FootprintOf): SaveDocument {
   const inventory = readInventory(document);
   const equipment = inventory.equipment.map(cloneRecord);
   let bag = inventory.bag.map(cloneRecord);
@@ -76,17 +81,26 @@ export function setTotalGold(document: SaveDocument, amount: number): SaveDocume
     }
   }
   bag = bag.map((record) => (isGold(record) ? emptyRecord() : record));
-  if (amount <= 0) return writeInventory(document, { equipment, bag, sequence: inventory.sequence });
 
-  const purse = [...equipment, ...bag].find((record) => PURSE_HEADS.has(record[0]));
-  if (purse) {
-    const list = Array.isArray(purse[1].lootList) ? (purse[1].lootList as unknown[]) : [];
-    purse[1].lootList = [markAdded(newGoldRecord(amount)), ...list];
-    return writeInventory(document, { equipment, bag, sequence: inventory.sequence });
+  let left = Math.max(0, Math.floor(amount));
+  for (const record of [...equipment, ...bag]) {
+    if (left <= 0) break;
+    if (!PURSE_HEADS.has(record[0])) continue;
+    const take = Math.min(left, PURSE_CAPACITY);
+    const list = Array.isArray(record[1].lootList) ? (record[1].lootList as unknown[]) : [];
+    record[1].lootList = [markAdded(newGoldRecord(take)), ...list];
+    left -= take;
   }
-  const free = bag.findIndex((record) => record[0] === "empty");
-  const coins = markAdded(newGoldRecord(amount));
-  if (free >= 0) bag[free] = coins;
-  else bag.push(coins);
-  return writeInventory(document, { equipment, bag, sequence: inventory.sequence });
+
+  let filled: Inventory = { equipment, bag, sequence: inventory.sequence };
+  while (left > 0) {
+    const take = Math.min(left, COIN_PILE_CAPACITY);
+    try {
+      filled = placeInBag(filled, markAdded(newGoldRecord(take)), footprintOf);
+    } catch {
+      break; // Out of grid space: the field settles at what actually fits.
+    }
+    left -= take;
+  }
+  return writeInventory(document, filled);
 }

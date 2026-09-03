@@ -3,6 +3,7 @@ import { CHARACTER_FIELDS, characterMap, IDENTITY_FIELDS, setCharacterField, set
 import { NumberField } from "./NumberField";
 import { energyBreakdown, healthBreakdown, type VitalBreakdown } from "../model/vitals";
 import type { Catalog } from "../model/catalog";
+import { catalogItemFor } from "../model/records";
 
 interface Props {
   document: SaveDocument;
@@ -21,7 +22,7 @@ export function CharacterPanel({ document, catalog, onChange, onError }: Props) 
 
   function setGold(value: number) {
     try {
-      onChange(setTotalGold(document, value));
+      onChange(setTotalGold(document, value, (record) => catalogItemFor(record, catalog) ?? { w: 1, h: 1 }));
     } catch (error) {
       onError(error instanceof Error ? error.message : String(error));
     }
@@ -35,7 +36,7 @@ export function CharacterPanel({ document, catalog, onChange, onError }: Props) 
         <span>Gold</span>
         <NumberField value={gold} min={0} onCommit={setGold} />
       </label>
-      <p className="hint">Coins go into your purse if you carry one, otherwise into a free bag slot.</p>
+      <p className="hint">Coins fill your purses first, 2000 each, then loose piles of 100 in free bag cells. A number bigger than that settles at what fits.</p>
       <div className="fields">
         {CHARACTER_FIELDS.map((field) => (
           <label key={field.key} className="field" title={field.hint}>

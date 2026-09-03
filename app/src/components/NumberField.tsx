@@ -11,18 +11,14 @@ interface Props {
 }
 
 /**
- * A numeric input that keeps whatever you typed while you type. A plain controlled number input
- * fights the user: "02" sticks, and clearing the field snaps back to 0.
+ * A numeric input that shows exactly what you typed while you are typing, then falls back to the
+ * value the model accepted once you leave. A plain controlled number input fights the user ("02"
+ * sticks, clearing snaps to 0); keeping the draft only while focused also means a value the model
+ * clamps — gold beyond what your purses and bag can hold — is shown honestly rather than as typed.
  */
 export function NumberField({ value, onCommit, min, max, integer = true, className }: Props) {
-  const [draft, setDraft] = useState(String(value));
-  const [focused, setFocused] = useState(false);
-  const [seen, setSeen] = useState(value);
-  // Follow outside changes (undo, reset, gold moved into a purse) unless the user is mid-edit.
-  if (value !== seen) {
-    setSeen(value);
-    if (!focused) setDraft(String(value));
-  }
+  // null means "no draft": show the committed value.
+  const [draft, setDraft] = useState<string | null>(null);
 
   function parse(text: string): number | null {
     const trimmed = text.trim().replace(",", ".");
@@ -40,18 +36,16 @@ export function NumberField({ value, onCommit, min, max, integer = true, classNa
       type="text"
       inputMode={integer ? "numeric" : "decimal"}
       className={className}
-      value={draft}
-      onFocus={() => setFocused(true)}
+      value={draft ?? String(value)}
       onChange={(event) => {
         setDraft(event.target.value);
         const parsed = parse(event.target.value);
-        if (parsed !== null) onCommit(parsed);
+        if (parsed !== null && parsed !== value) onCommit(parsed);
       }}
       onBlur={() => {
-        setFocused(false);
-        const parsed = parse(draft);
-        setDraft(String(parsed ?? value));
+        const parsed = parse(draft ?? "");
         if (parsed !== null && parsed !== value) onCommit(parsed);
+        setDraft(null);
       }}
     />
   );

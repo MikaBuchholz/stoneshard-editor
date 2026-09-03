@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { decodeSave } from "../codec/save";
-import { setTotalGold, totalGold } from "./character";
+import { COIN_PILE_CAPACITY, PURSE_CAPACITY, setTotalGold, totalGold } from "./character";
 import { layoutBag, moveInBag, placeInBag, readInventory, removeFromBag, sortBag, swapInBag, writeInventory } from "./inventory";
 import { isEmptyRecord, newObjectRecord, type ItemRecord } from "./records";
 import type { CatalogItem } from "./catalog";
@@ -103,7 +103,7 @@ describe("inventory model", () => {
     const { document } = await decodeSave(freshSave);
     // The starting character carries her coins inside a purse.
     expect(totalGold(document)).toBe(250);
-    const updated = setTotalGold(document, 999);
+    const updated = setTotalGold(document, 999, footprint);
     expect(totalGold(updated)).toBe(999);
     const purse = readInventory(updated).bag.find((record) => record[0] === "o_inv_moneybag")!;
     expect((purse[1].lootList as ItemRecord[]).filter((entry) => entry[0] === "o_inv_gold")).toHaveLength(1);
@@ -114,8 +114,31 @@ describe("inventory model", () => {
     const purseIndex = inventory.bag.findIndex((record) => record[0] === "o_inv_moneybag");
     const withoutPurse = writeInventory(document, removeFromBag(inventory, purseIndex));
     expect(totalGold(withoutPurse)).toBe(0);
-    const loose = setTotalGold(withoutPurse, 150);
+    const loose = setTotalGold(withoutPurse, 150, footprint);
     expect(totalGold(loose)).toBe(150);
-    expect(readInventory(loose).bag.filter((record) => record[0] === "o_inv_gold")).toHaveLength(1);
+    // 150 crowns is more than one pile holds, so it lands as 100 + 50.
+    expect(readInventory(loose).bag.filter((record) => record[0] === "o_inv_gold").map((record) => record[6]).sort((a, b) => b - a)).toEqual([100, 50]);
+  });
+
+  it("respects the game's purse and pile limits, and settles at what fits", async () => {
+    const { document } = await decodeSave(freshSave);
+    const inventory = readInventory(document);
+    const purseIndex = inventory.bag.findIndex((record) => record[0] === "o_inv_moneybag");
+
+    // One purse takes 2000; the rest spills into 100-crown piles on the grid.
+    const spilled = setTotalGold(document, PURSE_CAPACITY + 250, footprint);
+    expect(totalGold(spilled)).toBe(PURSE_CAPACITY + 250);
+    const purse = readInventory(spilled).bag[purseIndex];
+    expect((purse[1].lootList as ItemRecord[]).find((entry) => entry[0] === "o_inv_gold")![6]).toBe(PURSE_CAPACITY);
+    const piles = readInventory(spilled).bag.filter((record) => record[0] === "o_inv_gold").map((record) => record[6]);
+    expect(piles.every((pile) => pile <= COIN_PILE_CAPACITY)).toBe(true);
+    expect(piles.reduce((sum, pile) => sum + pile, 0)).toBe(250);
+
+    // Far more than the bag can hold stops at capacity instead of writing one impossible stack.
+    const capped = setTotalGold(document, 10_000_000, footprint);
+    const total = totalGold(capped);
+    expect(total).toBeGreaterThan(PURSE_CAPACITY);
+    expect(total).toBeLessThan(10_000_000);
+    expect(readInventory(capped).bag.filter((record) => record[0] === "o_inv_gold").every((record) => record[6] <= COIN_PILE_CAPACITY)).toBe(true);
   });
 });
