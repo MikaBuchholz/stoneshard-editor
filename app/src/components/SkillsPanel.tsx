@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import type { SaveDocument } from "../codec/save";
-import { readLearnedSkills, setSkillLearned, unlearnAllSkills, type SkillCatalog, type SkillCatalogEntry, type SkillTree } from "../model/skills";
+import { readLearnedSkills, setSkillLearned, startingSkills, unlearnAllSkills, type SkillCatalog, type SkillCatalogEntry, type SkillTree } from "../model/skills";
 import { characterMap, setCharacterField } from "../model/character";
 import { SkillTooltip, type SkillTooltipState } from "./SkillTooltip";
 
@@ -23,6 +23,8 @@ export function SkillsPanel({ document, skills, onChange }: Props) {
   }, [skills]);
 
   const learnedCount = Array.from(learned.values()).filter(Boolean).length;
+  const starting = useMemo(() => startingSkills(document), [document]);
+  const refundable = Array.from(learned.entries()).filter(([id, isLearned]) => isLearned && !starting.has(id)).length;
 
   function hoverHandlers(skill: SkillCatalogEntry | undefined, id: string | null) {
     if (!skill) return {};
@@ -34,9 +36,9 @@ export function SkillsPanel({ document, skills, onChange }: Props) {
     };
   }
 
-  /** Unlearn everything and hand the points back. Ability points live in the save's SP field. */
+  /** Unlearn everything the character paid for and hand the points back. Ability points live in the save's SP field. */
   function resetSkills() {
-    const { document: cleared, count } = unlearnAllSkills(document);
+    const { document: cleared, count } = unlearnAllSkills(document, starting);
     const points = Number(characterMap(document).SP ?? 0);
     onChange(setCharacterField(cleared, "SP", points + count));
   }
@@ -56,11 +58,11 @@ export function SkillsPanel({ document, skills, onChange }: Props) {
         <span className="muted">{learnedCount} learned</span>
         <button
           type="button"
-          disabled={learnedCount === 0}
+          disabled={refundable === 0}
           onClick={resetSkills}
-          title="Unlearn every skill and add the same number of ability points"
+          title="Unlearn every skill the character paid for and add the same number of ability points. Starting skills stay."
         >
-          Refund all {learnedCount > 0 ? learnedCount : ""}
+          Refund all {refundable > 0 ? refundable : ""}
         </button>
       </div>
       <div className="tree-tabs">
@@ -103,7 +105,7 @@ export function SkillsPanel({ document, skills, onChange }: Props) {
       <p className="hint">
         Hover a skill to read it, click to learn or unlearn it. Dimmed icons are not learned. Learning here does not spend
         ability points or check prerequisites; the game may expect the lower tiers to be learned first. Refunding hands back
-        one ability point per skill, including any your class started with for free.
+        one ability point per skill and leaves the ones the character started with for free untouched.
       </p>
       {tooltip && (
         <SkillTooltip state={tooltip} learned={tooltip.id && learned.has(tooltip.id) ? learned.get(tooltip.id) === true : null} />

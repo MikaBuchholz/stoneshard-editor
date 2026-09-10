@@ -1,4 +1,5 @@
 import type { SaveDocument } from "../codec/save";
+import { characterMap } from "./character";
 
 /**
  * Skills live in `skillsDataMap.skillsAllDataList`, a flat list of five values per skill:
@@ -101,12 +102,49 @@ export function setSkillLearned(document: SaveDocument, id: string, learned: boo
   throw new Error("That skill is not in this save.");
 }
 
-/** Unlearn every skill at once, keeping each stored flag's value type. */
-export function unlearnAllSkills(document: SaveDocument): { document: SaveDocument; count: number } {
+/**
+ * Skills every character starts with for free: the Basic Skills tree (Examine Surroundings, Element of
+ * Surprise, Craft, Set Aflame) plus Butchering, which the wiki lists as unlocked for everyone.
+ */
+export const BASIC_SKILLS: readonly string[] = [
+  "o_skill_trap_search_ico",
+  "o_pass_skill_Sudden_Attacks",
+  "o_skill_craft_ico",
+  "o_skill_torch_strike_ico",
+  "o_skill_butchering_ico",
+];
+
+/**
+ * Extra starting skills a character's trait grants, keyed by the save's classKey and nameKey so either
+ * matches. Dirwin's Ranger's Grit gives Make a Halt; Hilda's Wild Hunt gives Resourcefulness.
+ */
+export const TRAIT_SKILLS: Readonly<Record<string, readonly string[]>> = {
+  Beastslayer: ["o_pass_skill_resourcefulness"],
+  Hilda: ["o_pass_skill_resourcefulness"],
+  Dirwin: ["o_pass_skill_halt"],
+};
+
+/** Ids of the skills this character started with, whether or not they are still learned. */
+export function startingSkills(document: SaveDocument): Set<string> {
+  const character = characterMap(document);
+  const ids = new Set(BASIC_SKILLS);
+  for (const key of [character.classKey, character.nameKey]) {
+    if (typeof key !== "string") continue;
+    for (const id of TRAIT_SKILLS[key] ?? []) ids.add(id);
+  }
+  return ids;
+}
+
+/**
+ * Unlearn every skill at once, keeping each stored flag's value type. Skills in `keep` stay learned and
+ * are not counted; pass the character's starting skills so free abilities are not refunded.
+ */
+export function unlearnAllSkills(document: SaveDocument, keep: ReadonlySet<string> = new Set()): { document: SaveDocument; count: number } {
   const list = [...skillList(document)];
   let count = 0;
   for (let index = 0; index + STRIDE <= list.length; index += STRIDE) {
-    if (typeof list[index] !== "string" || !truthy(list[index + 1])) continue;
+    const id = list[index];
+    if (typeof id !== "string" || keep.has(id) || !truthy(list[index + 1])) continue;
     const current = list[index + 1];
     list[index + 1] = typeof current === "boolean" ? false : 0;
     count += 1;

@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { decodeSave, type SaveDocument } from "../codec/save";
-import { readLearnedSkills, setSkillLearned, unlearnAllSkills } from "./skills";
+import { BASIC_SKILLS, readLearnedSkills, setSkillLearned, startingSkills, unlearnAllSkills } from "./skills";
 
 const freshSave = new Uint8Array(readFileSync(new URL("../../fixtures/character_1/save_1/data.sav", import.meta.url)));
 
@@ -55,5 +55,39 @@ describe("skills", () => {
     expect(clearedNumeric.count).toBe(5);
     const list = (clearedNumeric.document.skillsDataMap as { skillsAllDataList: unknown[] }).skillsAllDataList;
     expect(list.filter((value, index) => index % 5 === 1 && value !== 0)).toHaveLength(0);
+  });
+
+  it("knows which skills a character started with", async () => {
+    const { document } = await decodeSave(freshSave);
+    const arna = startingSkills(document);
+    expect(arna).toEqual(new Set(BASIC_SKILLS));
+    expect(arna.size).toBe(5);
+    for (const id of arna) expect(readLearnedSkills(document).get(id)).toBe(true);
+
+    const withCharacter = (fields: Record<string, unknown>): SaveDocument => ({
+      ...document,
+      characterDataMap: { ...(document.characterDataMap as Record<string, unknown>), ...fields },
+    });
+    const hilda = startingSkills(withCharacter({ nameKey: "Hilda", classKey: "Beastslayer" }));
+    expect(hilda.size).toBe(6);
+    expect(hilda.has("o_pass_skill_resourcefulness")).toBe(true);
+    const dirwin = startingSkills(withCharacter({ nameKey: "Dirwin", classKey: "Unknown" }));
+    expect(dirwin.size).toBe(6);
+    expect(dirwin.has("o_pass_skill_halt")).toBe(true);
+    expect(startingSkills(withCharacter({ nameKey: "Velmir", classKey: "Revenger" })).size).toBe(5);
+  });
+
+  it("keeps starting skills learned and unrefunded when asked to", async () => {
+    const { document } = await decodeSave(freshSave);
+    const starting = startingSkills(document);
+    expect(unlearnAllSkills(document, starting).count).toBe(0);
+
+    const learnedOne = setSkillLearned(document, "o_skill_piercing_lunge_ico", true);
+    const { document: cleared, count } = unlearnAllSkills(learnedOne, starting);
+    expect(count).toBe(1);
+    const after = readLearnedSkills(cleared);
+    expect(after.get("o_skill_piercing_lunge_ico")).toBe(false);
+    expect(Array.from(after.values()).filter(Boolean)).toHaveLength(5);
+    for (const id of starting) expect(after.get(id)).toBe(true);
   });
 });
