@@ -77,7 +77,7 @@ export function ItemPicker({ catalog, showHidden, dragHandle, onAdd }: Props) {
               title={addable ? "Drag into the bag, or press Add" : "Cannot be generated"}
             >
               <span className="item-icon">
-                <ItemSprite item={item} fallback="?" />
+                <ItemSprite item={item} fallback="?" lazy />
               </span>
               <span className="item-text">
                 <span>{item.name}</span>

@@ -56,6 +56,13 @@ Git ignores `test/`, root-level `character_*/` folders and stray `.sav` files in
 own saves stay out of the repository. The test suite does not read them either: it reads the committed
 fixture in `app/fixtures/`, which is why it passes on a fresh clone and in CI.
 
+## Caching
+
+`app/public/service-worker.js` keeps the bundle, sprites, skill icons and tree panels in the browser's cache
+between visits, because GitHub Pages only allows ten minutes. The page and the catalogs always come from the
+network when it is available. After rebuilding the catalogs, bump `VERSION` in the worker so browsers drop the
+old images.
+
 ## Deploying
 
 See [DEPLOY.md](DEPLOY.md). Pushing to `main` publishes the site to GitHub Pages.
