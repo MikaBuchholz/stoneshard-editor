@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { SaveDocument } from "../codec/save";
 import { readLearnedSkills, setSkillLearned, startingSkills, unlearnAllSkills, type SkillCatalog, type SkillCatalogEntry, type SkillTree } from "../model/skills";
 import { characterMap, setCharacterField } from "../model/character";
@@ -23,6 +23,19 @@ export function SkillsPanel({ document, skills, onChange }: Props) {
   }, [skills]);
 
   const learnedCount = Array.from(learned.values()).filter(Boolean).length;
+
+  // Every tree panel is a separate image, and a hosted round trip takes longer than a click should.
+  // Fetch them all once so switching tabs never waits on the network.
+  useEffect(() => {
+    const base = import.meta.env.BASE_URL;
+    for (const tree of skills.trees) {
+      new Image().src = `${base}trees/${tree.image}`;
+      for (const icon of tree.icons) {
+        const skill = icon.overlay && icon.skillId ? skills.byId.get(icon.skillId) : undefined;
+        if (skill?.icon) new Image().src = `${base}skills/${skill.icon}`;
+      }
+    }
+  }, [skills]);
   const starting = useMemo(() => startingSkills(document), [document]);
   const refundable = Array.from(learned.entries()).filter(([id, isLearned]) => isLearned && !starting.has(id)).length;
 
