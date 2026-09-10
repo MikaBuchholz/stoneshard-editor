@@ -91,13 +91,15 @@ export function SkillsPanel({ document, skills, onChange }: Props) {
               <button
                 type="button"
                 key={`${icon.x},${icon.y}`}
-                className={["skill-hotspot", isLearned ? "learned" : "unlearned", known ? "" : "unknown"].join(" ")}
+                className={["skill-hotspot", isLearned ? "learned" : "unlearned", known ? "" : "unknown", icon.overlay ? "overlay" : ""].join(" ")}
                 style={{ left: icon.x, top: icon.y, width: icon.size, height: icon.size }}
                 aria-label={skill?.name ?? icon.name}
                 {...hoverHandlers(skill, icon.skillId)}
                 disabled={!known}
                 onClick={() => icon.skillId && toggle(icon.skillId)}
-              />
+              >
+                {icon.overlay && skill?.icon && <img src={`${import.meta.env.BASE_URL}skills/${skill.icon}`} alt="" />}
+              </button>
             );
           })}
         </div>

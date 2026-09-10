@@ -63,6 +63,16 @@ TREE_GROUPS = {
     "Sorcery": ["Pyromancy", "Geomancy", "Electromancy", "Arcanistics"],
 }
 
+# Icons the wiki's image maps do not place yet. The game moved Craft and Set Aflame into the Basic Skills
+# tree, but the wiki's panel still shows those two top-row slots as locked, so the editor draws the game's
+# own icon over the slot ("overlay"). Drop an entry once the wiki's image map carries it.
+TREE_EXTRA_ICONS = {
+    "Basic Skills": [
+        {"name": "Craft", "x": 178, "y": 86, "size": 62, "overlay": True},
+        {"name": "Set Aflame", "x": 256, "y": 86, "size": 62, "overlay": True},
+    ],
+}
+
 
 def normalize(text: str) -> str:
     return re.sub(r"[^a-z0-9]", "", text.lower())
@@ -244,6 +254,8 @@ def fetch_trees():
                 {"name": icon_name.strip(), "x": int(x), "y": int(y), "size": int(size)}
                 for icon_name, x, y, size in re.findall(r"\{\{TooltipImage\|([^|}]+)\|(\d+)\|(\d+)\|(\d+)\}\}", body)
             ]
+            present = {icon["name"] for icon in icons}
+            icons += [dict(icon) for icon in TREE_EXTRA_ICONS.get(name, []) if icon["name"] not in present]
             url = wiki_image_url(image.strip())
             if not url:
                 print(f"  no image file for {name}, skipped")

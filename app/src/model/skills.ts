@@ -47,6 +47,8 @@ export interface TreeIcon {
   y: number;
   size: number;
   skillId: string | null;
+  /** The panel image shows this slot as empty, so draw the skill's own icon over it. */
+  overlay?: boolean;
 }
 
 export interface SkillTree {

@@ -29783,6 +29783,22 @@
 "y": 86,
 "size": 62,
 "skillId": "o_pass_skill_Sudden_Attacks"
+},
+{
+"name": "Craft",
+"x": 178,
+"y": 86,
+"size": 62,
+"overlay": true,
+"skillId": "o_skill_craft_ico"
+},
+{
+"name": "Set Aflame",
+"x": 256,
+"y": 86,
+"size": 62,
+"overlay": true,
+"skillId": "o_skill_torch_strike_ico"
 }
 ]
 },
